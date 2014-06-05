@@ -28,3 +28,6 @@
 
 # Ignore deploy config.
 /config/deploy
+
+*.swo
+*.swp
