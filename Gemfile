@@ -54,7 +54,7 @@ gem 'bcrypt', '~> 3.1.7', require: false
 gem 'kaminari', '~> 0.15.1'
 
 # Nokogiri XML parser
-gem 'nokogiri', '~> 1.6.1'
+gem 'nokogiri'
 
 # Gravatar
 gem 'gravtastic', '~> 3.2.6'
