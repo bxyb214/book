@@ -1,0 +1,921 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"par",
+				"params"
+			],
+			[
+				"pa",
+				"params"
+			],
+			[
+				"comment",
+				"comment"
+			],
+			[
+				"ff",
+				"ff	form_for"
+			],
+			[
+				"end",
+				"end	end (ERB)"
+			],
+			[
+				"comm",
+				"comment"
+			],
+			[
+				"att",
+				"attr	Ruby attr_accessor"
+			],
+			[
+				"at",
+				"attr	Ruby attr_accessor"
+			],
+			[
+				"Comment",
+				"comment"
+			],
+			[
+				"time",
+				"time_ago_in_word"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app/views/topics/index.html.slim",
+			"settings":
+			{
+				"buffer_size": 2091,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/Markdown Preview/Markdown.sublime-build",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"slim",
+				"Set Syntax: Ruby Slim"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"pac in",
+				"Package Control: Install Package"
+			],
+			[
+				"rails",
+				"Set Syntax: HTML (Rails)"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"task",
+				"Tasks: New"
+			],
+			[
+				"task n do",
+				"Tasks: New document"
+			],
+			[
+				"task new",
+				"Tasks: New"
+			],
+			[
+				"takse",
+				"Tasks: New"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"fetch",
+				"Fetch: File"
+			],
+			[
+				"fecth",
+				"File: Copy Path From Project"
+			],
+			[
+				"PREV",
+				"Markdown Preview: Python Markdown: Preview in Browser"
+			],
+			[
+				"preview",
+				"Markdown Preview: Python Markdown: Preview in Browser"
+			],
+			[
+				"previw",
+				"Markdown Preview: Open Markdown Cheat sheet"
+			],
+			[
+				"mark",
+				"Marked"
+			],
+			[
+				"mar",
+				"Set Syntax: Markdown"
+			],
+			[
+				"marked",
+				"Marked"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"copy",
+				"File: Copy as Tag script"
+			],
+			[
+				"intall",
+				"Package Control: Install Package"
+			],
+			[
+				"gist",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"prefix",
+				"Preferences: Prefixr Key Bindings – Default"
+			],
+			[
+				"ruby",
+				"Set Syntax: Ruby"
+			],
+			[
+				"RUBY",
+				"Set Syntax: Ruby"
+			],
+			[
+				"RAILS",
+				"Set Syntax: HTML (Rails)"
+			],
+			[
+				"form_for",
+				"Snippet: form_for label"
+			],
+			[
+				"link_to",
+				"Snippet: link_to (path)"
+			],
+			[
+				"form",
+				"Snippet: form_for"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"install package",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 647.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/admin/opensource/bootstrap-2.3.2/docs/assets/css/bootstrap.css",
+		"/Users/admin/opensource/bootstrap-2.3.2/docs/assets/css/bootstrap-responsive.css",
+		"/Users/admin/opensource/campo/app/views/topics/new.html.slim",
+		"/Users/admin/opensource/campo/config/locales/zh-CN.yml",
+		"/Users/admin/opensource/campo/config/locales/en.yml",
+		"/Users/admin/opensource/ruby-china/app/views/topics/feed.builder",
+		"/Users/admin/opensource/campo/config/routes.rb",
+		"/Users/admin/opensource/campo/Gemfile",
+		"/Users/admin/opensource/the-swift-programming-language-in-chinese/swift-cn.sublime-project",
+		"/Users/admin/gist/timeline/css/styles.css",
+		"/Users/admin/gist/timeline/index.html.erb",
+		"/Users/admin/gist/timeline/css/bootstrap-glyphicons.css",
+		"/Users/admin/gist/timeline/css/bootstrap.min.css",
+		"/Users/admin/gist/timeline/pics/zhaiyingchang.jpeg",
+		"/Users/admin/Downloads/demo/css/styles.css",
+		"/Users/admin/Downloads/demo/js/jquery-1.11.0.min.js",
+		"/Users/admin/Downloads/demo/index.html",
+		"/Users/admin/bootstrap-2.3.2/docs/assets/css/docs.css",
+		"/Users/admin/bootstrap-2.3.2/docs/assets/css/bootstrap.css",
+		"/Users/admin/map/map.TODO",
+		"/Users/admin/map/hello.css",
+		"/Users/admin/map/hello.html",
+		"/Users/admin/map/map.sublime-project",
+		"/Users/admin/map/untitled.sublime-project",
+		"/Users/admin/hello/Gemfile",
+		"/Users/admin/hello/public/422.html",
+		"/Users/admin/hello/app/controllers/application_controller.rb",
+		"/Users/admin/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/admin/Library/Application Support/Sublime Text 2/Packages/SideBarEnhancements/Default (OSX).sublime-keymap",
+		"/Users/admin/hello/db/migrate/20140531011503_create_users.rb",
+		"/Users/admin/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/admin/hello/hello.sublime-project",
+		"/Users/admin/hello/hai.md",
+		"/Users/admin/hello/lal.js",
+		"/Users/admin/hello/asset/css/main.css",
+		"/Users/admin/Library/Application Support/Sublime Text 2/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
+		"/Users/admin/hello/lala",
+		"/Users/admin/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/admin/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/admin/hello/app/models/user.rb",
+		"/Users/admin/hello/this week.TODO",
+		"/Users/admin/hello/app/models/this week.TODO",
+		"/Users/admin/hello/haha.js",
+		"/Users/admin/hello/good/ok.css",
+		"/Users/admin/Library/Application Support/Sublime Text 2/Packages/SideBarEnhancements/messages/11.13.2012.1305.0.txt",
+		"/Users/admin/hello/ok/lala.css",
+		"/Users/admin/Library/Application Support/Sublime Text 2/Packages/Prefixr/Default (OSX).sublime-keymap",
+		"/Users/admin/Library/Application Support/Sublime Text 2/Packages/1.html",
+		"/Users/admin/haha/app/views/users/index.html.erb",
+		"/Users/admin/Desktop/projects/blog.sublime-project",
+		"/Users/admin/haha/Gemfile",
+		"/Users/admin/haha/db/production.sqlite3",
+		"/Users/admin/haha/app/controllers/products_controller.rb",
+		"/Users/admin/haha/test/controllers/orders_controller_test.rb",
+		"/Users/admin/blog/Gemfile.lock",
+		"/Users/admin/blog/app/views/posts/edit.html.erb",
+		"/Users/admin/blog/app/controllers/application_controller.rb",
+		"/Users/admin/blog/app/views/posts/_form.html.erb",
+		"/Users/admin/haha/app/models/cart.rb",
+		"/Users/admin/haha/app/views/carts/show.html.erb",
+		"/Users/admin/haha/config/routes.rb",
+		"/Users/admin/blog/config.ru",
+		"/Users/admin/blog/config/routes.rb",
+		"/Users/admin/Desktop/blog.sublime-project",
+		"/Users/admin/blog/app/views/posts/show.html.erb",
+		"/Users/admin/blog/app/views/posts/index.json.jbuilder",
+		"/Users/admin/blog/app/views/posts/index.html.erb",
+		"/Users/admin/blog/app/controllers/posts_controller.rb",
+		"/Users/admin/haha/app/views/line_items/_form.html.erb",
+		"/Users/admin/haha/app/views/products/who_bought.atom.builder",
+		"/Users/admin/timebox/app/models/project.rb",
+		"/Users/admin/timebox/app/controllers/application_controller.rb",
+		"/Users/admin/haha/app/models/order.rb",
+		"/Users/admin/haha/app/controllers/orders_controller.rb",
+		"/Users/admin/timebox/Gemfile",
+		"/Users/admin/haha/app/models/product.rb",
+		"/Users/admin/hello/db/seeds.rb",
+		"/Users/admin/haha/db/migrate/20140405005730_create_orders.rb",
+		"/Users/admin/hello/db/schema.rb",
+		"/Users/admin/haha/db/schema.rb",
+		"/Users/admin/haha/db/migrate/20140407102902_create_users.rb",
+		"/Users/admin/blog/app/models/post.rb",
+		"/Users/admin/blog/app/models/comment.rb",
+		"/Users/admin/blog/Gemfile",
+		"/Users/admin/blog/app/controllers/comments_controller.rb",
+		"/Users/admin/blog/app/assets/stylesheets/scaffolds.css.scss",
+		"/Users/admin/blog1/app/controllers/comments_controller.rb",
+		"/Users/admin/blog1/app/views/posts/show.html.erb",
+		"/Users/admin/blog1/app/controllers/posts_controller.rb",
+		"/Users/admin/blog1/app/views/posts/index.html.erb",
+		"/Users/admin/blog1/app/assets/stylesheets/posts.css.scss",
+		"/Users/admin/blog1/app/assets/stylesheets/scaffolds.css.scss",
+		"/Users/admin/blog1/config/routes.rb",
+		"/Users/admin/blog1/app/models/comment.rb",
+		"/Users/admin/blog1/app/models/post.rb",
+		"/Users/admin/blog1/Gemfile",
+		"/Users/admin/blog1/db/migrate/20140527010636_create_posts.rb",
+		"/Users/admin/blog1/db/migrate/20140527010806_create_comments.rb",
+		"/Users/admin/blog/app/views/comments/create.html.erb",
+		"/Users/admin/blog1/db/migrate/20140526082552_create_posts.rb",
+		"/Users/admin/blog1/db/migrate/20140526083258_create_comments.rb",
+		"/Users/admin/blog/db/migrate/20140525020638_create_posts.rb",
+		"/Users/admin/blog1/db/migrate/20140526080658_create_posts.rb",
+		"/Users/admin/Library/Application Support/Sublime Text 2/Packages/Rails Developer Snippets/ERB/end.End-ERB.sublime-snippet",
+		"/Users/admin/Library/Application Support/Sublime Text 2/Packages/ERB Snippets/end_erb.sublime-snippet",
+		"/Users/admin/Library/Application Support/Sublime Text 2/Packages/Ruby on Rails snippets/end.sublime-snippet",
+		"/Users/admin/Library/Application Support/Sublime Text 2/Packages/Rails/end.sublime-snippet",
+		"/Users/admin/Library/Application Support/Sublime Text 2/Packages/Rails/=.sublime-snippet",
+		"/Users/admin/Library/Application Support/Sublime Text 2/Packages/Rails/%.sublime-snippet",
+		"/Users/admin/blog/app/views/layouts/application.html.erb",
+		"/Users/admin/Library/Application Support/Sublime Text 2/Packages/ERB Snippets/form_for_erb.sublime-snippet",
+		"/Users/admin/Library/Application Support/Sublime Text 2/Packages/Rails/link_to-(path).sublime-snippet",
+		"/Users/admin/Library/Application Support/Sublime Text 2/Packages/Rails/form_for.sublime-snippet"
+	],
+	"find":
+	{
+		"height": 38.0
+	},
+	"find_in_files":
+	{
+		"height": 108.0,
+		"where_history":
+		[
+			"/Users/admin/opensource/campo",
+			"/Users/admin/opensource/",
+			"/Users/admin/Downloads/demo",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"订阅",
+			"create",
+			".create_topic",
+			"success",
+			"btn",
+			"suc",
+			"success",
+			"btn",
+			"rss",
+			"simple",
+			"</pre>",
+			"<pre>",
+			"center",
+			"timeline",
+			"img",
+			"icon",
+			"tldate",
+			"shadow",
+			"box",
+			"time",
+			"timeline",
+			"protect_from_forgery",
+			"keys",
+			"bar",
+			"margin",
+			"div",
+			"source",
+			"ctrl+shift",
+			"group",
+			"',\n",
+			"foure",
+			" ",
+			"one",
+			"joinv",
+			"rails",
+			"be",
+			"gem",
+			"rails",
+			"gem",
+			"gemj",
+			"ra",
+			"gem",
+			"Rails",
+			"rails",
+			"Rails",
+			"rails",
+			"format",
+			"respond format",
+			"respond to",
+			"respond",
+			"bought",
+			"who bought",
+			"format",
+			"before_",
+			"activerecord::",
+			"activerecord",
+			", ",
+			"p>",
+			"p",
+			"<",
+			"p",
+			"text",
+			"p",
+			"h1",
+			"<% end %><% end %><% end %><%= end %><% end %>end\n",
+			"dest",
+			"attr_accessible",
+			"	attr_accessible :text, :title",
+			"...}}\","
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/views/topics/index.html.slim",
+					"settings":
+					{
+						"buffer_size": 2091,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1504,
+								1504
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/Ruby Slim/Syntaxes/Ruby Slim.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 784.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 38.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.markdown":
+	{
+		"height": 154.0
+	},
+	"replace":
+	{
+		"height": 74.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"topicnew",
+				"campo/app/views/topics/new.html.slim"
+			],
+			[
+				"topicindex",
+				"app/views/topics/index.html.slim"
+			],
+			[
+				"buil",
+				"app/views/topics/feed.builder"
+			],
+			[
+				"topic",
+				"app/controllers/topics_controller.rb"
+			],
+			[
+				"routes",
+				"config/routes.rb"
+			],
+			[
+				"gemfile",
+				"Gemfile"
+			],
+			[
+				"route",
+				"config/routes.rb"
+			],
+			[
+				"bootstrapcss",
+				"bootstrap-2.3.2/docs/assets/css/bootstrap.css"
+			],
+			[
+				"contr",
+				"app/controllers/application_controller.rb"
+			],
+			[
+				"css",
+				"asset/css/main.css"
+			],
+			[
+				"",
+				"db/migrate/20140531011503_create_users.rb"
+			],
+			[
+				"thiswek",
+				"app/models/this week.TODO"
+			],
+			[
+				"migrate",
+				"db/migrate/20140531011503_create_users.rb"
+			],
+			[
+				"gem",
+				"Gemfile"
+			],
+			[
+				"produccon",
+				"app/controllers/products_controller.rb"
+			],
+			[
+				"conts",
+				"test/controllers/orders_controller_test.rb"
+			],
+			[
+				"con",
+				"app/controllers/application_controller.rb"
+			],
+			[
+				"wei",
+				"app/views/posts/edit.html.erb"
+			],
+			[
+				"cart",
+				"haha/app/models/cart.rb"
+			],
+			[
+				"cartshow",
+				"haha/app/views/carts/show.html.erb"
+			],
+			[
+				"_form",
+				"haha/app/views/line_items/_form.html.erb"
+			],
+			[
+				"show",
+				"haha/app/views/carts/show.html.erb"
+			],
+			[
+				"controller",
+				"haha/app/controllers/products_controller.rb"
+			],
+			[
+				"modelorder",
+				"haha/app/models/order.rb"
+			],
+			[
+				"modelp",
+				"app/models/project.rb"
+			],
+			[
+				"gm",
+				"Gemfile"
+			],
+			[
+				"created",
+				"haha/db/migrate/20140405005730_create_orders.rb"
+			],
+			[
+				"scaffcss",
+				"blog/app/assets/stylesheets/scaffolds.css.scss"
+			],
+			[
+				"bootscss",
+				"bootstrap-2.3.2/docs/assets/css/bootstrap.css"
+			],
+			[
+				"commentco",
+				"app/controllers/comments_controller.rb"
+			],
+			[
+				"indext",
+				"app/views/posts/index.html.erb"
+			],
+			[
+				"comment",
+				"app/models/comment.rb"
+			],
+			[
+				"post",
+				"app/models/post.rb"
+			],
+			[
+				"scaff.css",
+				"blog/app/assets/stylesheets/scaffolds.css.scss"
+			],
+			[
+				"bootstrap.css",
+				"bootstrap-2.3.2/docs/assets/css/bootstrap.css"
+			],
+			[
+				"commentcon",
+				"app/controllers/comments_controller.rb"
+			],
+			[
+				"show.h",
+				"app/views/posts/show.html.erb"
+			],
+			[
+				"comment.rb",
+				"app/models/comment.rb"
+			],
+			[
+				"post.rb",
+				"app/models/post.rb"
+			],
+			[
+				"scaffocss",
+				"blog/app/assets/stylesheets/scaffolds.css.scss"
+			],
+			[
+				"bootsrap.css",
+				"bootstrap-2.3.2/docs/assets/css/bootstrap.css"
+			],
+			[
+				"postcon",
+				"blog1/app/controllers/posts_controller.rb"
+			],
+			[
+				"contrcomm",
+				"blog1/app/controllers/comments_controller.rb"
+			],
+			[
+				"postindex",
+				"app/views/posts/index.html.erb"
+			],
+			[
+				"rb",
+				"app/models/post.rb"
+			],
+			[
+				"index",
+				"app/views/posts/index.html.erb"
+			],
+			[
+				"idex",
+				"blog1/app/views/posts/index.html.erb"
+			],
+			[
+				"postscss",
+				"blog1/app/assets/stylesheets/posts.css.scss"
+			],
+			[
+				"comentcont",
+				"blog/app/controllers/comments_controller.rb"
+			],
+			[
+				"comentscontro",
+				"blog1/app/controllers/comments_controller.rb"
+			],
+			[
+				"commentscont",
+				"blog1/app/controllers/comments_controller.rb"
+			],
+			[
+				"routes.rb",
+				"blog/config/routes.rb"
+			],
+			[
+				"routs",
+				"blog1/config/routes.rb"
+			],
+			[
+				"postshow",
+				"blog1/app/views/posts/show.html.erb"
+			],
+			[
+				"post.",
+				"blog/app/models/post.rb"
+			],
+			[
+				"modelcomment",
+				"blog1/app/models/comment.rb"
+			],
+			[
+				"model",
+				"blog1/app/models/post.rb"
+			],
+			[
+				"dbcreate",
+				"blog1/db/migrate/20140527010806_create_comments.rb"
+			],
+			[
+				"dbc",
+				"blog1/db/migrate/20140527010636_create_posts.rb"
+			],
+			[
+				"comment_controller",
+				"blog/app/controllers/comments_controller.rb"
+			],
+			[
+				"commentcontroller",
+				"blog1/app/controllers/comments_controller.rb"
+			],
+			[
+				"create",
+				"blog/app/views/comments/create.html.erb"
+			],
+			[
+				"gemfil",
+				"blog/Gemfile"
+			],
+			[
+				"modelpos",
+				"blog/app/models/post.rb"
+			],
+			[
+				"mig.rb",
+				"blog1/db/migrate/20140526082552_create_posts.rb"
+			],
+			[
+				"create_post",
+				"blog/db/migrate/20140525020638_create_posts.rb"
+			],
+			[
+				"createpost",
+				"blog1/db/migrate/20140526080658_create_posts.rb"
+			],
+			[
+				"end",
+				"Sublime Text 2/Packages/Rails Developer Snippets/ERB/end.End-ERB.sublime-snippet"
+			],
+			[
+				"apppliction",
+				"blog/app/views/layouts/application.html.erb"
+			],
+			[
+				"contro",
+				"blog/app/controllers/posts_controller.rb"
+			],
+			[
+				"comme",
+				"blog/app/models/comment.rb"
+			],
+			[
+				"form",
+				"Packages/ERB Snippets/form_for_erb.sublime-snippet"
+			],
+			[
+				"linktopa",
+				"Packages/Rails/link_to-(path).sublime-snippet"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/Users/admin/opensource/ruby-china/ruby-china.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 285.0,
+	"status_bar_visible": true
+}
