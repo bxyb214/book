@@ -39,6 +39,12 @@ class TopicsController < ApplicationController
     ).page(params[:page]).records
   end
 
+  def feed
+    @topics = Topic.all
+    render layout: false
+  end
+
+
   def show
     @topic = Topic.find params[:id]
 

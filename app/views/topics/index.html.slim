@@ -44,7 +44,7 @@
         = render 'search_form'
         .panel
           .panel-body
-            a.btn.btn-warning.btn-block href=node_feed_path(category_id: @category.try(:slug))
+            a.btn.btn-warning.btn-block href=feed_topics_path
               = t '.create_rss'
         .panel
           .panel-body
