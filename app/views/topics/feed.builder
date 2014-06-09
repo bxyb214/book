@@ -7,7 +7,7 @@ xml.rss :version => "2.0" do
     for topic in @topics
       xml.item do
         xml.title topic.title
-        xml.body markdown_format(topic.body)
+        xml.description markdown_format(topic.body)
         xml.pubDate topic.created_at.strftime("%a, %d %b %Y %H:%M:%S %z")
         xml.author topic.user.name
         xml.link topic_url topic
