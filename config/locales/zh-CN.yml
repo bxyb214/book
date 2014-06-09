@@ -251,6 +251,7 @@ zh-CN:
     index:
       all_categories: "所有分类"
       create_topic: "创建话题"
+      create_rss: "订阅我们"
       hot: "热门"
       hot_topics: "热门话题"
       newest: "最新"

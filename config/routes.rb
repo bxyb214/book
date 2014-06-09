@@ -43,6 +43,7 @@ Rails.application.routes.draw do
     collection do
       get 'categoried/:category_id', to: 'topics#index', as: :categoried
       get 'search'
+      get 'feed'
     end
 
     member do
