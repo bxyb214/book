@@ -6,6 +6,9 @@
       = user.name
       '
       span.text-muted = "@#{user.username}"
+    .user-profile-name 
+      = "第#{user.id}位会员"
+      '
     .user-profile-bio
       = simple_format user.bio
 
