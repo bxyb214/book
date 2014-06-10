@@ -10,11 +10,11 @@ html
     meta name="viewport" content="width=device-width, initial-scale=1.0"
     = csrf_meta_tags
 
-    - if content_for?(:meta) 
+    - if content_for?(:meta)
       = yield(:meta)
     - else
-      meta keywords="swift, swiftist, swift语言, 编程, 论坛, 教程, 问答, 热门, 新手, 入门, 热门, 最新, 订阅, 分类" data-turbolinks-track="true"
-      meta description="Swiftist.org是国内领先的swift语言论坛。这里聚集了一大批锐意进取的iOS开发者和swiftist爱好者。Swiftist.org致力于为国内开发者提供详尽的中文文档、代码实例等，助力开发者掌握并使用这门新兴的编程语言。" data-turbolinks-track="true"
+      meta keywords=("swift, swiftist, swift语言, 编程, 论坛, 教程, 问答, 热门, 新手, 入门, 热门, 最新, 订阅, 分类") data-turbolinks-track="true"
+      meta description=("Swiftist.org是国内领先的swift语言论坛。这里聚集了一大批锐意进取的iOS开发者和swiftist爱好者。Swiftist.org致力于为国内开发者提供详尽的中文文档、代码实例等，助力开发者掌握并使用这门新兴的编程语言。") data-turbolinks-track="true"
 
     javascript:
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
