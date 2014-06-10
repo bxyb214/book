@@ -67,3 +67,11 @@
                 li class=('active' if category == @category)
                   a href=categoried_topics_path(category_id: category.slug)
                     = category.name
+        .panel
+          .panel-body
+            h4.text-center 
+                = t '.friend_site'
+            .pic.text-center
+              a href='https://ruby-china.org/'
+                img src='http://python-china.b0.upaiyun.com/ruby-china-logo.png'
+
