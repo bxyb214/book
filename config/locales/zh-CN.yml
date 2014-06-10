@@ -249,6 +249,8 @@ zh-CN:
       save_changes: "保存修改"
       title: "标题"
     index:
+      meta_keywords: "swift, swiftist, 论坛 教程, 问答, 热门, 新手, 入门, 热门, 最新, 订阅, 分类"
+      meta_description: "Swiftist.org是国内领先的swift语言论坛。这里聚集了一大批锐意进取的iOS开发者和swiftist爱好者。Swiftist.org致力于为国内开发者提供详尽的中文文档、代码实例等，助力开发者掌握并使用这门新兴的编程语言。"
       all_categories: "所有分类"
       create_topic: "创建话题"
       create_rss: "订阅我们"
