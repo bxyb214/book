@@ -19,3 +19,21 @@
     min-height: 12em;
   }
 }
+
+.friends-sites{
+  .title{
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+  }
+  .site-item{
+    height: 30px;
+    a{
+      line-height: 30px;
+      font-size: 16px;
+      text-decoration: none;
+      &:hover{
+        color: orange;
+      }
+    }
+  }
+}
