@@ -1,0 +1,5 @@
+<%= form_for [:admin, @friend_site] do |f| %>
+	<h2>网站名称<%= f.text_field :name %></h2>
+	<h2>网站地址<%= f.text_field :url %></h2>
+	<h2><%= f.submit "更新友情链接" %></h2>
+<% end %>

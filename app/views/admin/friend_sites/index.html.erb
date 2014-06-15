@@ -1,0 +1,27 @@
+<%= form_for [:admin, @friend_site] do |f| %>
+	<h2>
+		<td>网站名称<%= f.text_field :name %></td>
+		<td>网站地址<%= f.text_field :url %></td>
+		<td><%= f.submit "创建友情链接" %></td>
+	</h2>
+
+<% end %>
+
+<h2>
+	<table>
+		<tr>
+			<th>网站名</th>
+			<th>网站地址</th>	
+		</tr>
+		<% @friend_sites.each do |f| %>
+			<tr>
+				<td><%= f.name %></td>
+				<td><%= f.url %></td>
+				<td><%= link_to "编辑", edit_admin_friend_site_path(f) %></td>
+				<td><%= link_to "删除", admin_friend_site_path(f), method: :delete, data: { confirm: 'Are you sure?' } %></td>	
+			</tr>
+		<% end %>
+
+	</table>
+
+</h2>
