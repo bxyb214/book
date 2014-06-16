@@ -6,8 +6,7 @@ class Admin::FriendSitesController < Admin::ApplicationController
   end
 
   def create
-  	@friend_site = FriendSite.new friend_site_params
-  	@friend_site.save
+    FriendSite.create friend_site_params
   	redirect_to admin_friend_sites_path
   end
 
