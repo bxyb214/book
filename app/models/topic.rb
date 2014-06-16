@@ -32,7 +32,7 @@ class Topic < ActiveRecord::Base
   end
 
   def calculate_hot
-    comments.order(id: :desc).first.created_at.to_f / 45000
+    comments.order(id: :desc).first.created_at.to_f / 45000 if comments.size > 0
     # order = Math.log10([comments_count, 1].max)
     # order + created_at.to_f / 45000
   end
