@@ -1,0 +1,32 @@
+= form_for @friend_site, url: url_for([:admin, @friend_site]), html: { class: 'category-form' } do |f|
+  .main
+    .container
+        .col-md-9
+          .panel
+            .panel-body
+              = f.text_field :name, class: 'form-control', placeholder: "网站名", tabIndex: 1
+              br
+              = f.text_field :url, class: 'form-control', placeholder: "网站地址", tabIndex: 1
+              br
+              = f.submit "创建友情链接", class: 'btn btn-success' 
+          .panel
+            .panel-heading
+              h3.panel-title = "已添加链接" 
+
+            .panel-body
+              - @friend_sites.each do |f|
+                .row 
+                  .col-md-3
+                    h4
+                      =f.name
+                  .col-md-6
+                    h4
+                      =f.url
+                  .col-md-1.5
+                    h4
+                      = link_to "编辑", edit_admin_friend_site_path(f)
+                  .col-md-1.5
+                    h4
+                      = link_to "删除", admin_friend_site_path(f), method: :delete, data: { confirm: 'Are you sure?' }
+
+

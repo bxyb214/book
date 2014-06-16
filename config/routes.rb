@@ -94,6 +94,8 @@ Rails.application.routes.draw do
   namespace :admin do
     root to: 'dashboard#show'
 
+    resources :friend_sites
+
     resources :users, only: [:index, :show, :update, :destroy] do
       collection do
         get :locked
