@@ -4,7 +4,7 @@ class TopicsController < ApplicationController
 
   def index
     @topics = Topic.includes(:user, :category).page(params[:page])
-
+    @friend_sites = FriendSite.all 
     if params[:category_id]
       @category = Category.where('lower(slug) = ?', params[:category_id].downcase).first!
       @topics = @topics.where(category: @category)

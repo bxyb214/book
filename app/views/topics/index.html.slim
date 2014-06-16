@@ -70,12 +70,8 @@
           .panel-body
             h4.text-center.title
               = t '.friend_site'
-            .site-item.text-center
-              =link_to "Swift中文指南", "http://swiftguide.cn/"
-            .site-item.text-center
-              =link_to "一起swift", "http://letsswift.com/"
-            .site-item.text-center
-              =link_to "SwiftV课堂", "http://v.swiftv.cn/school"
-            .site-item.text-center
-              =link_to "SwiftChina开发社区", "http://www.swiftchina.com"
+            - @friend_sites.each do |friend_site|
+              .site-item.text-center
+                =link_to friend_site.name, friend_site.url
+
 

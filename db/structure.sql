@@ -132,6 +132,38 @@ ALTER SEQUENCE comments_id_seq OWNED BY comments.id;
 
 
 --
+-- Name: friend_sites; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE friend_sites (
+    id integer NOT NULL,
+    name character varying(255),
+    url character varying(255),
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone
+);
+
+
+--
+-- Name: friend_sites_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE friend_sites_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: friend_sites_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE friend_sites_id_seq OWNED BY friend_sites.id;
+
+
+--
 -- Name: likes; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -349,6 +381,13 @@ ALTER TABLE ONLY comments ALTER COLUMN id SET DEFAULT nextval('comments_id_seq':
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
+ALTER TABLE ONLY friend_sites ALTER COLUMN id SET DEFAULT nextval('friend_sites_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
 ALTER TABLE ONLY likes ALTER COLUMN id SET DEFAULT nextval('likes_id_seq'::regclass);
 
 
@@ -402,6 +441,14 @@ ALTER TABLE ONLY categories
 
 ALTER TABLE ONLY comments
     ADD CONSTRAINT comments_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: friend_sites_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY friend_sites
+    ADD CONSTRAINT friend_sites_pkey PRIMARY KEY (id);
 
 
 --
@@ -585,4 +632,6 @@ INSERT INTO schema_migrations (version) VALUES ('20140405074043');
 INSERT INTO schema_migrations (version) VALUES ('20140412065000');
 
 INSERT INTO schema_migrations (version) VALUES ('20140412113810');
+
+INSERT INTO schema_migrations (version) VALUES ('20140612075008');
 
