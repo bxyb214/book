@@ -1,16 +1,9 @@
-= form_for @friend_site, url: url_for([:admin, @friend_site]), html: { class: 'category-form' } do |f|
-  .main
-    .container
-        .col-md-9
-          .panel
-            .panel-heading
-              h3.panel-title = "友情链接管理" 
-            .panel-body
-              = f.text_field :name, class: 'form-control', placeholder: "网站名", tabIndex: 1
-              br
-              = f.text_field :url, class: 'form-control', placeholder: "网站地址", tabIndex: 1
-              br
-              = f.submit "更新友情链接", class: 'btn btn-success' 
-
-
+.main
+  .container
+      .col-md-9
+        .panel
+          .panel-heading
+            h3.panel-title = "友情链接管理" 
+          .panel-body
+            =render 'form'           
 
