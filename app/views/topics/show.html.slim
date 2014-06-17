@@ -32,6 +32,8 @@
                     article.comment-body
                       = markdown_format @topic.body
                     .list-group-item-actions.clearfix
+                      .pull-left
+                         = social_share_button_tag(@topic.title)
                       .pull-right
                         a.btn id="like-for-topic-#{@topic.id}" href=topic_like_path(@topic) data-remote="true" data-method="post"
                           i.fa.fa-heart
