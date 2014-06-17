@@ -104,3 +104,5 @@ group :development, :test do
 end
 
 gem 'meta-tags'
+
+gem 'social-share-button'
