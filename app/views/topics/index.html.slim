@@ -69,6 +69,12 @@
         .panel.friends-sites
           .panel-body
             h4.text-center.title
+              = t '.sponsor'
+            .site-item.text-center
+              a href="https://www.upyun.com/index.html" target="_blank"        
+                = "又拍云"
+            br
+            h4.text-center.title
               = t '.friend_site'
             - @friend_sites.each do |friend_site|
               .site-item.text-center
