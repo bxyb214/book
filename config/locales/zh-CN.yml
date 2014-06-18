@@ -129,7 +129,7 @@ zh-CN:
       friend_sites: "友情链接"
     application:
       comments: "评论"
-      starter: "新手指南"
+      guide: "新手指南"
       community: "社区"
       likes: "收藏"
       logout: "退出"
