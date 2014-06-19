@@ -146,7 +146,7 @@ en:
   markdown:
     area:
       attach_images_by: Attach images by
-      preview: Preview
+      preview: PreviewPl
       select_them: Select them
       write: Write
   notification_mailer:
