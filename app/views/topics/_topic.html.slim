@@ -5,6 +5,8 @@
     .list-group-item-content
       .list-group-item-heading
         b = topic.title
+        -if topic.hot == Topic::TOP_HOT_VALUE
+          b.pull-right = "置顶"
       .text-muted
         = topic.user.name
         = ' · '

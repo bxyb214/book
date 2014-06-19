@@ -5,6 +5,8 @@ class Topic < ActiveRecord::Base
   include Elasticsearch::Model
   include Elasticsearch::Model::Callbacks
 
+  TOP_HOT_VALUE = 100000000000000000000
+
   belongs_to :user
   belongs_to :category, counter_cache: true
   has_many :comments, as: 'commentable'
@@ -53,6 +55,14 @@ class Topic < ActiveRecord::Base
 
   def total_pages
     (comments_count.to_f / Comment.default_per_page).ceil
+  end
+
+  def top_it
+    self.hot = TOP_HOT_VALUE
+    self.save
+  end
+  def cancel_top_it
+    self.update_hot
   end
 
   def more_like_this(num = 5)

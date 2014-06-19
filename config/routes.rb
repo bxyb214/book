@@ -109,14 +109,18 @@ Rails.application.routes.draw do
 
     resources :categories, except: [:edit]
 
-    resources :topics, only: [:index, :show, :update] do
+    resources :topics, only: [:index, :show, :update, :top, :cancel_top] do
       collection do
         get :trashed
       end
-
+      
+      patch :top
+      patch :cancel_top
+      
       member do
         delete :trash
         patch :restore
+
       end
     end
 

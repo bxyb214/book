@@ -87,6 +87,8 @@ zh-CN:
         no_category: "不分类"
         restore: "还原"
         save_changes: "保存修改"
+        top_it: "置顶本帖"
+        cancel_top_it: "取消置顶"
     users:
       flashes:
         successfully_destroy: "成功彻底删除用户"
