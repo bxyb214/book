@@ -32,5 +32,7 @@
 *.swo
 *.swp
 
+dump.rdb
+
 campo.sublime*
 
