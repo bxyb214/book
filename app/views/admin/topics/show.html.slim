@@ -41,9 +41,6 @@
                   =link_to admin_topic_top_path(@topic), method: :patch
                     button.btn.btn-primary
                       =t('.top_it')
-
-                     
-                    
                 .pull-right
                   - if @topic.trashed?
                     a.btn.btn-default href=restore_admin_topic_path(@topic) data-method="patch"
