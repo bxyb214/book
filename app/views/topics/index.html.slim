@@ -14,7 +14,7 @@
         .panel
           .panel-heading.clearfix
             h4 传说，牛人都叫-ist。有人叫scientist。有人叫artist。我们争取成为Swiftist!
-            h4 公告：社区发贴回复支持<a href='http://swiftist.org/topics/61'>Markdown语法</a>；再次恭喜<a href='http://www.swiftguide.cn/'>Swift中文指南</a>上线！
+            h4 公告：社区发贴回复支持<a href='http://swiftist.org/topics/61' target="_blank">Markdown语法 </a>；再次恭喜<a href='http://www.swiftguide.cn/' target="_blank">Swift中文指南</a>上线！
             h5
       .col-md-9
         .panel
@@ -68,6 +68,12 @@
                     = category.name
         .panel.friends-sites
           .panel-body
+            h4.text-center.title
+              = t '.sponsor'
+            .site-item.text-center
+              a href="https://www.upyun.com/index.html" target="_blank"        
+                img src="https://www.upyun.com/images/upyun_logo.png"
+            br
             h4.text-center.title
               = t '.friend_site'
             - @friend_sites.each do |friend_site|

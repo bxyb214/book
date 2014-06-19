@@ -131,6 +131,7 @@ en:
       users: Users
     application:
       comments: Comments
+      guide: Guide
       community: Community
       likes: Likes
       logout: Logout
@@ -258,6 +259,9 @@ en:
     index:
       all_categories: All categories
       create_topic: Create topic
+      create_rss: RSS Feed
+      sponsor: Sponsor
+      friend_site: Friends Links
       hot: Hot
       hot_topics: Hot topics
       newest: Newest
