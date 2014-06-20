@@ -73,9 +73,3 @@
             .site-item.text-center
               a href="https://www.upyun.com/index.html" target="_blank"
                 =image_tag "/upyun_logo.png"
-            br
-            h4.text-center.title
-              = t '.friend_site'
-            - @friend_sites.each do |friend_site|
-              .site-item.text-center
-                =link_to friend_site.name, friend_site.url, target: '_blank'
