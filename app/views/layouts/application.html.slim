@@ -128,3 +128,20 @@ html
     - if login? and !current_user.confirmed?
       = render 'share/user_confirm_required'
     = yield
+
+    footer
+      .container
+        .copyright
+          = "Swiftist.org社区，分享代码，改变世界。"
+        .powerby
+          | 本站使用Ruby on Rails搭建,
+          = link_to " 参与维护", "http://swiftist.org/topics/11", target: '_blank'
+          | 。图片存储由
+          = link_to "又拍云存储", "https://www.upyun.com/index.html", target: '_blank'
+          | 提供。
+        .friend-links.clearfix
+          .link-item.pull-left
+            =link_to "官方微博", "http://weibo.com/u/5171245144", target: '_blank'
+          - @friend_sites.each do |friend_site|
+            .link-item.pull-left
+              =link_to friend_site.name, friend_site.url, target: '_blank'
