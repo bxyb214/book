@@ -10,7 +10,7 @@
       .text-muted
         = topic.user.name
         = ' · '
-        = time_ago_tag topic.created_at
+        = time_ago_tag topic.updated_at
         - if topic.category
           = ' · '
           = topic.category.name
