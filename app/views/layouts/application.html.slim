@@ -142,6 +142,6 @@ html
         .friend-links.clearfix
           .link-item.pull-left
             =link_to "官方微博", "http://weibo.com/u/5171245144", target: '_blank'
-          - @friend_sites.each do |friend_site|
+          - FriendSite.all.each do |friend_site|
             .link-item.pull-left
               =link_to friend_site.name, friend_site.url, target: '_blank'
