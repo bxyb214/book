@@ -34,6 +34,17 @@ class Admin::TopicsController < Admin::ApplicationController
     redirect_to admin_topic_path(@topic)
   end
 
+  def top
+    topic = Topic.find params[:topic_id]
+    topic.top_it
+    redirect_to admin_topic_path(topic)
+  end
+  def cancel_top
+    topic = Topic.find params[:topic_id]
+    topic.cancel_top_it
+    redirect_to admin_topic_path(topic)
+  end
+
   private
 
   def find_topic

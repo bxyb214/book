@@ -113,10 +113,14 @@ Rails.application.routes.draw do
       collection do
         get :trashed
       end
-
+      
+      patch :top
+      patch :cancel_top
+      
       member do
         delete :trash
         patch :restore
+
       end
     end
 

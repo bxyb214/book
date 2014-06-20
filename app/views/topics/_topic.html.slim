@@ -5,10 +5,12 @@
     .list-group-item-content
       .list-group-item-heading
         b = topic.title
+        -if topic.hot == Topic::TOP_HOT_VALUE
+          b.pull-right = "置顶"
       .text-muted
         = topic.user.name
         = ' · '
-        = time_ago_tag topic.created_at
+        = time_ago_tag topic.updated_at
         - if topic.category
           = ' · '
           = topic.category.name

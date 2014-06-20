@@ -33,6 +33,14 @@
                 = f.text_field :comments_count, class: 'form-control', disabled: true
               .clearfix
                 = f.submit t('.save_changes'), class: 'btn btn-success', tabIndex: 4
+                - if @topic.hot == Topic::TOP_HOT_VALUE
+                  =link_to admin_topic_cancel_top_path(@topic), method: :patch
+                    button.btn.btn-primary
+                      =t('.cancel_top_it')
+                - else
+                  =link_to admin_topic_top_path(@topic), method: :patch
+                    button.btn.btn-primary
+                      =t('.top_it')
                 .pull-right
                   - if @topic.trashed?
                     a.btn.btn-default href=restore_admin_topic_path(@topic) data-method="patch"
