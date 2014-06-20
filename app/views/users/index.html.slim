@@ -1,0 +1,13 @@
+.main
+  .container
+    .top-users
+      .header.text-center
+        | TOP50 活跃会员
+      ul.user-list.clearfix
+        - @users.each do |user|
+          li.user-item.pull-left
+            .avatar
+              = link_to user_root_path(user.username) do
+                = image_tag user.avatar
+            .user-name.text-center
+              = link_to user.name, user_root_path(user.username)

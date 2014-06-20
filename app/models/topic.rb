@@ -7,7 +7,7 @@ class Topic < ActiveRecord::Base
 
   TOP_HOT_VALUE = 100000000000000000000
 
-  belongs_to :user
+  belongs_to :user, counter_cache: true
   belongs_to :category, counter_cache: true
   has_many :comments, as: 'commentable'
 
@@ -25,22 +25,19 @@ class Topic < ActiveRecord::Base
     if category
       Category.update_counters category.id, topics_count: 1
     end
+    User.update_counters user.id, topics_count: 1
   end
 
   def decrement_counter_cache
     if category
       Category.update_counters category.id, topics_count: -1
     end
+    User.update_counters user.id, topics_count: -1
   end
 
   def calculate_hot
-    if comments.size > 0
-      comments.order(id: :desc).first.created_at.to_f / 45000
-    else
-      created_at.to_f / 45000
-    end
-    # order = Math.log10([comments_count, 1].max)
-    # order + created_at.to_f / 45000
+    order = Math.log10([comments_count, 1].max)
+    order + created_at.to_f / 45000 * 2 * 30
   end
 
   def update_hot

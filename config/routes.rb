@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
   post 'markdown/preview', to: 'markdown#preview'
 
-  resources :users, only: [:create] do
+  resources :users, only: [:index, :create] do
     collection do
       get :check_email
       get :check_username
@@ -113,10 +113,10 @@ Rails.application.routes.draw do
       collection do
         get :trashed
       end
-      
+
       patch :top
       patch :cancel_top
-      
+
       member do
         delete :trash
         patch :restore

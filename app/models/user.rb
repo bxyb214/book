@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   has_secure_password
   has_many :topics, dependent: :destroy
   has_many :comments, dependent: :destroy
+
   has_many :notifications, dependent: :delete_all
   has_many :likes, dependent: :delete_all
 
@@ -20,6 +21,7 @@ class User < ActiveRecord::Base
 
   scope :unlocked, -> { where(locked_at: nil) }
   scope :locked, -> { where.not(locked_at: nil) }
+  scope :top, ->(n) { order(comments_count: :desc, topics_count: :desc).limit(n) }
 
   def remember_token
     [id, Digest::SHA512.hexdigest(password_digest)].join('$')

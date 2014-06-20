@@ -4,7 +4,7 @@ class Comment < ActiveRecord::Base
   include MarkdownHelper
 
   has_many :notifications, as: 'subject', dependent: :delete_all
-  belongs_to :user
+  belongs_to :user, counter_cache: true
   belongs_to :commentable, polymorphic: true, counter_cache: true, touch: true
 
   validates :commentable_type, inclusion: { in: %w(Topic) }
@@ -19,12 +19,14 @@ class Comment < ActiveRecord::Base
     if commentable.has_attribute? :comments_count
       commentable.class.update_counters commentable.id, comments_count: 1
     end
+    User.update_counters user.id, comments_count: 1
   end
 
   def decrement_counter_cache
     if commentable.has_attribute? :comments_count
       commentable.class.update_counters commentable.id, comments_count: -1
     end
+    User.update_counters user.id, comments_count: -1
   end
 
   def delete_all_notifications

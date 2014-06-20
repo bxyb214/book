@@ -43,3 +43,34 @@
     margin-left: 110px;
   }
 }
+
+.top-users{
+  border-radius: 5px;
+  background: white;
+  margin-top: 20px;
+  .header{
+    padding: 10px;
+    width: 100%;
+  }
+  ul.user-list{
+    padding: 0 20px;
+    list-style: none;
+    margin-left: -30px;
+    li.user-item{
+      margin: 0 0 20px 30px;
+      height: 77px;
+      .avatar{
+        width: 50px;
+        margin-bottom: 20px;
+        margin: 0 auto;
+        img{
+          width: 50px;
+        }
+      }
+      .user-name{
+        margin-top: 5px;
+        font-size: 0.8em;
+      }
+    }
+  }
+}

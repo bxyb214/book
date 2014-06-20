@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
   before_action :no_login_required, only: [:new, :create]
 
+  def index
+    @users = User.top 50
+  end
+
   def new
     store_location params[:return_to]
     @user = User.new
