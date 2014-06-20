@@ -8,6 +8,6 @@
           li.user-item.pull-left
             .avatar
               = link_to user_root_path(user.username) do
-                = image_tag user.avatar.normal.url
+                img.img-rounded alt="avatar" src=user.avatar.normal.url
             .user-name.text-center
               = link_to user.name, user_root_path(user.username)
