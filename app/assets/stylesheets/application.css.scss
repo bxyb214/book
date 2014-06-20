@@ -20,6 +20,14 @@ $font-size-base: 15px;
 body {
   background: #eee;
 }
+html, body{
+  height: 100%;
+  .main{
+    height: 100%;
+    min-height: 100%;
+    margin-bottom: -80px;
+  }
+}
 
 .text-hide-overflow {
   overflow: hidden;
@@ -45,6 +53,3 @@ footer{
   }
 }
 
-.main{
-  min-height: 530px;
-}
