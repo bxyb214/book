@@ -89,6 +89,8 @@ en:
         no_category: No category
         restore: Restore
         save_changes: Save changes
+        top_it: Top it
+        cancel_top_it: Cancel Top
     users:
       flashes:
         successfully_destroy: Successfully destroy
