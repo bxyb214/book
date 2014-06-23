@@ -1,7 +1,7 @@
 class TopicsController < ApplicationController
   before_action :login_required, :no_locked_required, except: [:index, :show, :search, :feed]
   before_action :find_topic, only: [:edit, :update, :trash]
-
+  
   def index
     @topics = Topic.includes(:user, :category).page(params[:page])
     if params[:category_id]
@@ -46,7 +46,7 @@ class TopicsController < ApplicationController
 
   def show
     @topic = Topic.find params[:id]
-
+    impressionist(@topic)
     if params[:comment_id] and comment = @topic.comments.find_by(id: params.delete(:comment_id))
       params[:page] = comment.page
     end

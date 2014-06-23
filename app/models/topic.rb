@@ -10,6 +10,7 @@ class Topic < ActiveRecord::Base
   belongs_to :user, counter_cache: true
   belongs_to :category, counter_cache: true
   has_many :comments, as: 'commentable'
+  is_impressionable :counter_cache => true
 
   validates :title, :body, presence: true
 
@@ -20,6 +21,10 @@ class Topic < ActiveRecord::Base
   after_restore :increment_counter_cache
   # Fix double desc counter
   after_destroy :increment_counter_cache, if: :trashed?
+
+  def visit_count
+    impressions.size
+  end
 
   def increment_counter_cache
     if category

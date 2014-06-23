@@ -283,8 +283,10 @@ zh-CN:
       sign_up: "注册"
       to_comment: "后发表评论"
       your_account_had_been_locked: "你的帐号已被锁定"
+      visitors: "浏览："
     topic:
       comments_count: "%{count} 条评论"
+      visitors: " 人浏览"
   user_mailer:
     confirmation:
       subject: "邮箱确认"

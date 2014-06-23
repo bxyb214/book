@@ -287,8 +287,10 @@ en:
       sign_up: Sign up
       to_comment: To comment
       your_account_had_been_locked: Your account had been locked
+      visitors: "Visit: "
     topic:
       comments_count: "%{count} comments"
+      visitors: " views"
   user_mailer:
     confirmation:
       subject: Email confirmation
