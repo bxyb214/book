@@ -1,5 +1,7 @@
-require 'roo'
-def set_page_view
+namespace :db do
+  desc "TODO"
+  task initialize_page_view: :environment do
+	require 'roo'
 	s = Roo::Excelx.new("#{Rails.root}/lib/page_view.xlsx")  # loads an Excel Spreadsheet for Excel .xlsx files
 
 
@@ -19,4 +21,10 @@ def set_page_view
 		end
 	end
 
+  end
 end
+
+
+
+
+
