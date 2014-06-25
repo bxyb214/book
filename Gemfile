@@ -109,3 +109,4 @@ gem 'social-share-button'
 
 gem 'impressionist'
 
+gem 'roo'
