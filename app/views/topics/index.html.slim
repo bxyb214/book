@@ -65,7 +65,10 @@
               - Category.order(topics_count: :desc).each do |category|
                 li class=('active' if category == @category)
                   a href=categoried_topics_path(category_id: category.slug)
-                    = category.name
+                    = category.name 
+                    .pull-right
+                      =category.topics.count 
+
         .panel.friends-sites
           .panel-body
             h4.text-center.title
