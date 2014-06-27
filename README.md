@@ -1,13 +1,13 @@
-# Campo
+# This is the codebase of [Swiftist.org](http://swiftist.org) 
 
-Campo is a lightweight forum application, base on Ruby on Rails.
+
+[Swiftist.org](http://swiftist.org) is based on @Rei's Campo, which is a lightweight forum application, base on Ruby on Rails.
 
 It's good for:
 
 - Build user forum for your website.
 - As code base, customize develop for your business.
 
-[![Build Status](https://travis-ci.org/chloerei/campo.png?branch=master)](https://travis-ci.org/chloerei/campo)
 
 ## Build with
 
@@ -22,15 +22,6 @@ The best deploy environment is Ubuntu 12.04 LTS, require at least 1G memory.
 
 You don't need to install all denpendency manual, an auto-install scirpt will be show below.
 
-## How to development or deployment
-
-Read document here: https://github.com/chloerei/campo/wiki
-
-## Donate
-
-Buy me some Instant noodles:
-
-http://chloerei.com/donate/
 
 ## License
 
