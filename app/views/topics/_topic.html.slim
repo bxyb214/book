@@ -15,7 +15,7 @@
           = ' · '
           = topic.category.name
         = ' · '
-        - cache [topic.visit_count]
+        - cache [topic, locale, topic.visit_count]
           = topic.visit_count
         = t '.visitors'
         .pull-right

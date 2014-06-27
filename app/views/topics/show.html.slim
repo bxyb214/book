@@ -31,7 +31,7 @@
                           = @topic.category.name
                       .pull-right
                         =t('.visitors')
-                        - cache [@topic.visit_count]
+                        - cache [@topic, locale, @topic.visit_count]
                           = @topic.visit_count
                     article.comment-body
                       = markdown_format @topic.body
