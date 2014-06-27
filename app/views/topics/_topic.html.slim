@@ -6,7 +6,7 @@
       .list-group-item-heading
         b = topic.title
         -if topic.hot == Topic::TOP_HOT_VALUE
-          b.pull-right = "置顶"
+          b.pull-right = t '.top'
       .text-muted
         = topic.user.name
         = ' · '
@@ -15,4 +15,7 @@
           = ' · '
           = topic.category.name
         = ' · '
-        = t '.comments_count', count: topic.comments_count
+        = topic.visit_count
+        = t '.visitors'
+        .pull-right
+          = t '.comments_count', count: topic.comments_count

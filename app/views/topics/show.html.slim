@@ -29,6 +29,9 @@
                         = ' · '
                         a href=categoried_topics_path(category_id: @topic.category.slug)
                           = @topic.category.name
+                      .pull-right
+                        =t('.visitors')
+                        = @topic.visit_count
                     article.comment-body
                       = markdown_format @topic.body
                     .list-group-item-actions.clearfix

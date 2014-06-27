@@ -117,6 +117,7 @@ GEM
     hiredis (0.4.5)
     http_accept_language (2.0.1)
     http_parser.rb (0.5.3)
+    httpclient (2.4.0)
     i18n (0.6.9)
     i18n-tasks (0.3.2)
       activesupport
@@ -126,6 +127,9 @@ GEM
       slop (>= 3.4.7)
       term-ansicolor
       terminal-table
+    impressionist (1.5.1)
+      httpclient (~> 2.2)
+      nokogiri (~> 1.5)
     jbuilder (1.5.3)
       activesupport (>= 3.0.0)
       multi_json (>= 1.2.0)
@@ -207,7 +211,13 @@ GEM
       vegas (~> 0.1.2)
     resque_mailer (2.2.6)
       actionmailer (>= 3.0)
+    roo (1.13.2)
+      nokogiri
+      rubyzip
+      spreadsheet (> 0.6.4)
     rouge (1.3.2)
+    ruby-ole (1.2.11.7)
+    rubyzip (1.1.4)
     sass (3.2.18)
     sass-rails (4.0.3)
       railties (>= 4.0.0, < 5.0)
@@ -225,6 +235,8 @@ GEM
     social-share-button (0.1.6)
       coffee-rails
       sass-rails
+    spreadsheet (0.9.7)
+      ruby-ole (>= 1.0)
     spring (1.1.0)
     sprockets (2.11.0)
       hike (~> 1.2)
@@ -282,6 +294,7 @@ DEPENDENCIES
   hiredis (~> 0.4.5)
   http_accept_language (~> 2.0.1)
   i18n-tasks (~> 0.3.2)
+  impressionist
   jbuilder (~> 1.2)
   jquery-rails
   kaminari (~> 0.15.1)
@@ -296,6 +309,7 @@ DEPENDENCIES
   redis (~> 3.0.7)
   resque (~> 1.25.1)
   resque_mailer (~> 2.2.6)
+  roo
   rouge (~> 1.3.1)
   sass-rails (~> 4.0.2)
   slim (~> 2.0.2)

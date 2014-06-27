@@ -164,6 +164,47 @@ ALTER SEQUENCE friend_sites_id_seq OWNED BY friend_sites.id;
 
 
 --
+-- Name: impressions; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE impressions (
+    id integer NOT NULL,
+    impressionable_type character varying(255),
+    impressionable_id integer,
+    user_id integer,
+    controller_name character varying(255),
+    action_name character varying(255),
+    view_name character varying(255),
+    request_hash character varying(255),
+    ip_address character varying(255),
+    session_hash character varying(255),
+    message text,
+    referrer text,
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone
+);
+
+
+--
+-- Name: impressions_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE impressions_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: impressions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE impressions_id_seq OWNED BY impressions.id;
+
+
+--
 -- Name: likes; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -290,7 +331,8 @@ CREATE TABLE topics (
     subscriptions_count integer DEFAULT 0,
     trashed boolean DEFAULT false,
     created_at timestamp without time zone,
-    updated_at timestamp without time zone
+    updated_at timestamp without time zone,
+    impressions_count integer DEFAULT 0
 );
 
 
@@ -390,6 +432,13 @@ ALTER TABLE ONLY friend_sites ALTER COLUMN id SET DEFAULT nextval('friend_sites_
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
+ALTER TABLE ONLY impressions ALTER COLUMN id SET DEFAULT nextval('impressions_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
 ALTER TABLE ONLY likes ALTER COLUMN id SET DEFAULT nextval('likes_id_seq'::regclass);
 
 
@@ -454,6 +503,14 @@ ALTER TABLE ONLY friend_sites
 
 
 --
+-- Name: impressions_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY impressions
+    ADD CONSTRAINT impressions_pkey PRIMARY KEY (id);
+
+
+--
 -- Name: likes_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -494,6 +551,34 @@ ALTER TABLE ONLY users
 
 
 --
+-- Name: controlleraction_ip_index; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX controlleraction_ip_index ON impressions USING btree (controller_name, action_name, ip_address);
+
+
+--
+-- Name: controlleraction_request_index; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX controlleraction_request_index ON impressions USING btree (controller_name, action_name, request_hash);
+
+
+--
+-- Name: controlleraction_session_index; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX controlleraction_session_index ON impressions USING btree (controller_name, action_name, session_hash);
+
+
+--
+-- Name: impressionable_type_message_index; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX impressionable_type_message_index ON impressions USING btree (impressionable_type, message, impressionable_id);
+
+
+--
 -- Name: index_attachments_on_user_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -519,6 +604,13 @@ CREATE INDEX index_comments_on_commentable_id_and_commentable_type ON comments U
 --
 
 CREATE INDEX index_comments_on_user_id ON comments USING btree (user_id);
+
+
+--
+-- Name: index_impressions_on_user_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_impressions_on_user_id ON impressions USING btree (user_id);
 
 
 --
@@ -599,6 +691,27 @@ CREATE UNIQUE INDEX index_users_on_lowercase_username ON users USING btree (lowe
 
 
 --
+-- Name: poly_ip_index; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX poly_ip_index ON impressions USING btree (impressionable_type, impressionable_id, ip_address);
+
+
+--
+-- Name: poly_request_index; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX poly_request_index ON impressions USING btree (impressionable_type, impressionable_id, request_hash);
+
+
+--
+-- Name: poly_session_index; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX poly_session_index ON impressions USING btree (impressionable_type, impressionable_id, session_hash);
+
+
+--
 -- Name: unique_schema_migrations; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -637,5 +750,29 @@ INSERT INTO schema_migrations (version) VALUES ('20140412113810');
 
 INSERT INTO schema_migrations (version) VALUES ('20140612075008');
 
+INSERT INTO schema_migrations (version) VALUES ('20140617061733');
+
+INSERT INTO schema_migrations (version) VALUES ('20140617081813');
+
+INSERT INTO schema_migrations (version) VALUES ('20140617082308');
+
+INSERT INTO schema_migrations (version) VALUES ('20140617091826');
+
+INSERT INTO schema_migrations (version) VALUES ('20140618021247');
+
+INSERT INTO schema_migrations (version) VALUES ('20140618030128');
+
+INSERT INTO schema_migrations (version) VALUES ('20140618032810');
+
+INSERT INTO schema_migrations (version) VALUES ('20140618034110');
+
+INSERT INTO schema_migrations (version) VALUES ('20140618034717');
+
 INSERT INTO schema_migrations (version) VALUES ('20140620090118');
+
+INSERT INTO schema_migrations (version) VALUES ('20140623032914');
+
+INSERT INTO schema_migrations (version) VALUES ('20140623033657');
+
+INSERT INTO schema_migrations (version) VALUES ('20140623065349');
 
