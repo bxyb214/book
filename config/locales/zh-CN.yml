@@ -287,6 +287,7 @@ zh-CN:
     topic:
       comments_count: "%{count} 条评论"
       visitors: " 人浏览"
+      top: "置顶"
   user_mailer:
     confirmation:
       subject: "邮箱确认"

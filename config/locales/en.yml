@@ -291,6 +291,7 @@ en:
     topic:
       comments_count: "%{count} comments"
       visitors: " views"
+      top: "Top"
   user_mailer:
     confirmation:
       subject: Email confirmation
