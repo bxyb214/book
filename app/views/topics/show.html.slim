@@ -11,7 +11,6 @@
           .panel-heading
             h1.panel-title = @topic.title
           .panel-body
-            - cache [@topic, locale] do
               .list-group.list-group-campo
                 .list-group-item.comment data-creator-id=@topic.user_id
                   a.list-group-item-avatar href=user_link(@topic.user)
@@ -29,12 +28,14 @@
                         = ' · '
                         a href=categoried_topics_path(category_id: @topic.category.slug)
                           = @topic.category.name
-                      .pull-right
-                        =t('.visitors')
-                        - cache [@topic, locale, @topic.visit_count]
-                          = @topic.visit_count
+
+                      = ' · '
+                      = @topic.visit_count
+                      = t '.visitors'
+
                     article.comment-body
-                      = markdown_format @topic.body
+                      -cache [@topic, locale] do
+                        = markdown_format @topic.body
                     .list-group-item-actions.clearfix
                       .pull-left
                          = social_share_button_tag(@topic.title)
