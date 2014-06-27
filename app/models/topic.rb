@@ -15,7 +15,10 @@ class Topic < ActiveRecord::Base
   validates :title, :body, presence: true
 
   after_create :update_hot, :owner_subscribe
-  after_touch :update_hot
+  if Topic.where(hot = TOP_HOT_VALUE)
+  else
+    after_touch :update_hot
+  end
 
   after_trash :decrement_counter_cache
   after_restore :increment_counter_cache
