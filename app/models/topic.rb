@@ -23,7 +23,7 @@ class Topic < ActiveRecord::Base
   after_destroy :increment_counter_cache, if: :trashed?
 
   def visit_count
-    impressions.size
+    impressionist_count(:filter=>:all)
   end
 
   def increment_counter_cache

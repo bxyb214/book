@@ -31,7 +31,8 @@
                           = @topic.category.name
                       .pull-right
                         =t('.visitors')
-                        = @topic.visit_count
+                        - cache [@topic.visit_count]
+                          = @topic.visit_count
                     article.comment-body
                       = markdown_format @topic.body
                     .list-group-item-actions.clearfix
