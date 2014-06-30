@@ -15,10 +15,7 @@ class Topic < ActiveRecord::Base
   validates :title, :body, presence: true
 
   after_create :update_hot, :owner_subscribe
-  if Topic.where(hot = TOP_HOT_VALUE)
-  else
-    after_touch :update_hot
-  end
+  after_touch :update_hot
 
   after_trash :decrement_counter_cache
   after_restore :increment_counter_cache
@@ -51,7 +48,10 @@ class Topic < ActiveRecord::Base
   def update_hot
     # reload because comments_count has been cache in associations
     reload
-    update_attribute :hot, calculate_hot
+    if hot = TOP_HOT_VALUE
+    else
+      update_attribute :hot, calculate_hot
+    end
   end
 
   def owner_subscribe
