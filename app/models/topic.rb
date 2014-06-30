@@ -48,7 +48,7 @@ class Topic < ActiveRecord::Base
   def update_hot
     # reload because comments_count has been cache in associations
     reload
-    update_attribute :hot, calculate_hot
+    update_attribute :hot, calculate_hot if hot != TOP_HOT_VALUE    
   end
 
   def owner_subscribe
