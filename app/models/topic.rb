@@ -48,8 +48,7 @@ class Topic < ActiveRecord::Base
   def update_hot
     # reload because comments_count has been cache in associations
     reload
-    if hot = TOP_HOT_VALUE
-    else
+    if hot != TOP_HOT_VALUE
       update_attribute :hot, calculate_hot
     end
   end
