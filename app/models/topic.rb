@@ -66,6 +66,7 @@ class Topic < ActiveRecord::Base
     self.save
   end
   def cancel_top_it
+    update_attribute :hot, 0
     self.update_hot
   end
 
