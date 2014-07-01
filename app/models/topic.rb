@@ -41,14 +41,16 @@ class Topic < ActiveRecord::Base
   end
 
   def calculate_hot
-    order = Math.log10([comments_count, 1].max)
-    order + created_at.to_f / 45000 * 2 * 30
+    # order = Math.log10([comments_count, 1].max)
+    # order + created_at.to_f / 45000 * 2 * 30
+
+    updated_at.to_f / 45000
   end
 
   def update_hot
     # reload because comments_count has been cache in associations
     reload
-    update_attribute :hot, calculate_hot if hot != TOP_HOT_VALUE    
+    update_attribute :hot, calculate_hot if hot != TOP_HOT_VALUE
   end
 
   def owner_subscribe
