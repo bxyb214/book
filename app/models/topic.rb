@@ -66,7 +66,7 @@ class Topic < ActiveRecord::Base
     self.save
   end
   def cancel_top_it
-    self.update_hot
+    update_attribute :hot, calculate_hot
   end
 
   def more_like_this(num = 5)
