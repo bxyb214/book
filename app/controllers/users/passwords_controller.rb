@@ -9,7 +9,7 @@ class Users::PasswordsController < ApplicationController
   end
 
   def create
-    if @user = User.find_by(email: params[:email])
+    if @user = User.find_by("lower(email) = ?", params[:email].downcase)
       UserMailer.password_reset(@user.id).deliver
       redirect_to users_password_path
     else
