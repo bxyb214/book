@@ -48,6 +48,7 @@ module MarkdownHelper
 
     markdown = Redcarpet::Markdown.new(renderer,
                                        autolink: true,
+                                       tables: true,
                                        space_after_headers: true,
                                        fenced_code_blocks: true)
 
