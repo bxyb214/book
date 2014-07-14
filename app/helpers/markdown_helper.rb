@@ -3,6 +3,11 @@ require 'rouge/plugins/redcarpet'
 module MarkdownHelper
   class HTMLRender < Redcarpet::Render::HTML
     include Rouge::Plugins::Redcarpet
+    def block_html(raw_html)
+      if raw_html =~ /^<iframe.*>$/
+        raw_html
+      end
+    end
   end
 
   class TextReplaceVisitor
@@ -44,7 +49,7 @@ module MarkdownHelper
   def markdown(text)
     renderer = HTMLRender.new(hard_wrap: true,
                               filter_html: true,
-                              link_attributes: { rel: 'nofollow' })
+                              link_attributes: { rel: 'nofollow' }) 
 
     markdown = Redcarpet::Markdown.new(renderer,
                                        autolink: true,
