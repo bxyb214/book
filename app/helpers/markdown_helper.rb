@@ -57,8 +57,8 @@ module MarkdownHelper
 
   def markdown_format(text)
     sanitize(markdown_text_replace(markdown(text)),
-             tags: %w(table th tr td thead tbody p br img h1 h2 h3 h4 blockquote pre code strong em a ul ol li span),
-             attributes: %w(href src class title alt target rel))
+             tags: %w(table th tr td thead tbody p br img h1 h2 h3 h4 blockquote pre code strong em a ul ol li span iframe),
+             attributes: %w(href src class title alt target rel height width frameborder allowfullscreen))
   end
 
   def markdown_area(form, name, options = {})
