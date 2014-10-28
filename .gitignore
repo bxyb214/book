@@ -19,6 +19,7 @@
 /config/database.yml
 /config/secrets.yml
 /config/config.yml
+/config/resque.sh
 
 # Ignore uploads.
 /public/uploads
