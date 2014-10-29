@@ -4,7 +4,7 @@
       img.img-rounded alt="avatar" src=comment.user.avatar.normal.url
     .list-group-item-content
       .list-group-item-heading
-        a.comment-user href=user_link(comment.user)
+        a.comment-user href=user_link(comment.user) data-name=comment.user.username
           b = comment.user.name
           '
           = "@#{comment.user.username}"

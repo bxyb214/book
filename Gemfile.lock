@@ -6,6 +6,12 @@ GIT
     turbolinks (2.2.2)
       coffee-rails
 
+GIT
+  remote: git://github.com/ichord/jquery-atwho-rails.git
+  revision: 00036c4c743b1f84bdd38d62384609ac07b061d1
+  specs:
+    jquery-atwho-rails (0.5.1)
+
 GEM
   remote: http://ruby.taobao.org/
   specs:
@@ -306,6 +312,7 @@ DEPENDENCIES
   i18n-tasks (~> 0.3.2)
   impressionist
   jbuilder (~> 1.2)
+  jquery-atwho-rails!
   jquery-rails
   kaminari (~> 0.15.1)
   meta-tags
