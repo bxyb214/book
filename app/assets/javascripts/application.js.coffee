@@ -26,12 +26,3 @@ $(document).on 'page:change', ->
   NProgress.done()
 $(document).on 'page:restore', ->
   NProgress.remove()
-
-$ ->
-  data = ['tom','john'];
-  commenters = {}
-  a = $('#comments .comment-user')
-  for e in a
-    $e = $(e)
-    commenters[$e.attr("data-name")] = $e.attr("data-name")
-  $('textarea').atwho({at:"@", 'data': Object.keys(commenters)});

@@ -140,3 +140,12 @@
         }
       }
     });
+
+    data = ['tom','john'];
+    commenters = {}
+    comments = $('#comments .comment-user')
+    for (i = 0; i < comments.length; i++) {
+      $comment = $(comments[i])
+      commenters[$comment.attr("data-name")] = $comment.attr("data-name")
+    }
+    $('textarea').atwho({at:"@", 'data': Object.keys(commenters)});
