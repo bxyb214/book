@@ -51,12 +51,12 @@
         = render 'search_form'
         .panel
           .panel-body
-            a.btn.btn-warning.btn-block href=feed_topics_path
-              = t '.create_rss'
-        .panel
-          .panel-body
             a.btn.btn-success.btn-block href=new_topic_path(category_id: @category.try(:slug))
               = t '.create_topic'
+        .panel
+          .panel-body
+            a.btn.btn-warning.btn-block href=feed_topics_path
+              = t '.create_rss'
         .panel
           .panel-body
             ul.nav.nav-pills.nav-stacked

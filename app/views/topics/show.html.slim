@@ -17,7 +17,7 @@
                     img.img-rounded alt="avatar" src=@topic.user.avatar.normal.url
                   .list-group-item-content
                     .list-group-item-heading
-                      a.comment-user href=user_link(@topic.user)
+                      a.comment-user href=user_link(@topic.user) data-name=@topic.user.username
                         b = @topic.user.name
                         '
                         = "@#{@topic.user.username}"
@@ -140,3 +140,12 @@
         }
       }
     });
+
+    data = ['tom','john'];
+    commenters = {}
+    comments = $('#comments .comment-user')
+    for (i = 0; i < comments.length; i++) {
+      $comment = $(comments[i])
+      commenters[$comment.attr("data-name")] = $comment.attr("data-name")
+    }
+    $('textarea').atwho({at:"@", 'data': Object.keys(commenters)});

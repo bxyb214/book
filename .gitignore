@@ -19,9 +19,12 @@
 /config/database.yml
 /config/secrets.yml
 /config/config.yml
+/config/resque.sh
 
 # Ignore uploads.
 /public/uploads
+
+/public/assets
 
 # Ignore Vagrant config.
 /.vagrant

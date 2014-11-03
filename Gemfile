@@ -19,6 +19,7 @@ gem 'coffee-rails', '~> 4.0.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+gem 'jquery-atwho-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 # Wait for https://github.com/rails/turbolinks/pull/364
@@ -101,6 +102,10 @@ end
 
 group :development, :test do
   gem 'factory_girl_rails', '~> 4.3.0'
+  gem 'pry',                '0.9.12'
+  gem 'pry-nav',            '0.2.2'
+  gem 'pry-stack_explorer', '0.4.9'
+  gem 'pry-rails',          '0.2.2'
 end
 
 gem 'meta-tags'

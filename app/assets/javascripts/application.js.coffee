@@ -7,6 +7,7 @@
 #= require jquery.timeago
 #= require nprogress
 #= require campo
+#= require jquery.atwho
 #= require_tree ./plugins
 #= require social-share-button
 
