@@ -249,7 +249,7 @@ zh-CN:
       edit_topic: "编辑话题"
     form:
       cancel: "取消"
-      create_topic: "创建话题"
+      create_topic: "创建章节"
       no_category: "不分类"
       save_changes: "保存修改"
       title: "标题"
@@ -257,7 +257,7 @@ zh-CN:
       meta_keywords: "swift, swiftist, 论坛 教程, 问答, 热门, 新手, 入门, 热门, 最新, 订阅, 分类"
       meta_description: "Swiftist.org是国内领先的swift语言论坛。这里聚集了一大批锐意进取的iOS开发者和swiftist爱好者。Swiftist.org致力于为国内开发者提供详尽的中文文档、代码实例等，助力开发者掌握并使用这门新兴的编程语言。"
       all_categories: "所有分类"
-      create_topic: "创建话题"
+      create_topic: "创建章节"
       create_rss: "订阅我们"
       sponsor: "友情赞助"
       friend_site: "友情链接"
@@ -266,9 +266,9 @@ zh-CN:
       newest: "最新"
       home_page: "首页"
       newest_topics: "最新话题"
-      no_topic_yet: "还没有话题"
+      no_topic_yet: "还没有文章"
     new:
-      new_topic: "新话题"
+      new_topic: "新章节"
     search:
       no_matching_results: "没有匹配结果"
       search: "搜索"
@@ -356,7 +356,7 @@ zh-CN:
     topics:
       index:
         likes: "收藏"
-        no_topic_yet: "还没有话题"
+        no_topic_yet: "还没有文章"
         publish: "发布"
         topics: "话题"
         user_s_topics: "%{name} 的话题"

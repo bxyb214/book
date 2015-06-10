@@ -28,15 +28,15 @@ default: &default
 development:
   <<: *default
   admin_emails:
-    - admin@example.com
+    - 33225761@qq.com
 
 test:
   <<: *default
   admin_emails:
-    - admin@example.com
+    - 33225761@qq.com
 
 production:
   <<: *default
 
   admin_emails:
-    # - admin@example.com
+     - 332257611@qq.com

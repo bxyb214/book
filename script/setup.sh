@@ -3,7 +3,10 @@
 USER=`whoami`
 APP_ROOT=/var/www/campo
 
-sudo apt-get update
+# :<<!
+# !
+
+# sudo apt-get update
 
 # Install system packages
 sudo DEBIAN_FRONTEND=noninteractive apt-get install -y redis-server memcached git-core nodejs imagemagick postfix
@@ -17,8 +20,12 @@ sudo update-rc.d elasticsearch defaults
 sudo service elasticsearch start
 
 # Install PostgreSQL
-sudo apt-get install -y postgresql libpq-dev
+sudo apt-get install postgresql-9.4
+#sudo apt-get install -y postgresql libpq-dev
 sudo su postgres -c "createuser -d -R -S $USER"
+
+#sudo apt-get install mysql-server
+
 
 # Install Passenger
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 561F9B9CAC40B2F7
@@ -33,6 +40,8 @@ curl -sSL https://get.rvm.io | bash -s stable
 source ~/.rvm/scripts/rvm
 rvm install 2.1.1
 rvm use --default 2.1.1
+
+
 
 # Development environment
 cp config/database.example.yml config/database.yml
@@ -56,6 +65,8 @@ sudo chmod +x /etc/init.d/resque
 sudo sed -i "s|APP_ROOT=.\+|APP_ROOT=$APP_ROOT/current|" /etc/init.d/resque
 sudo sed -i "s/USER=\w\+/USER=$USER/" /etc/init.d/resque
 sudo update-rc.d resque defaults
+
+
 
 # Nginx config
 sudo cp config/nginx.example.conf /etc/nginx/sites-available/campo
