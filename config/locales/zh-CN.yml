@@ -132,7 +132,7 @@ zh-CN:
     application:
       comments: "评论"
       guide: "新手指南"
-      community: "社区"
+      community: "官方网站"
       users: "用户"
       likes: "收藏"
       logout: "退出"
@@ -253,6 +253,10 @@ zh-CN:
       no_category: "不分类"
       save_changes: "保存修改"
       title: "标题"
+      body: "正文"
+      answer: "答案"
+      audio_path: "声音文件地址"
+      remove_audio: "移除声音文件"
     index:
       meta_keywords: "swift, swiftist, 论坛 教程, 问答, 热门, 新手, 入门, 热门, 最新, 订阅, 分类"
       meta_description: "Swiftist.org是国内领先的swift语言论坛。这里聚集了一大批锐意进取的iOS开发者和swiftist爱好者。Swiftist.org致力于为国内开发者提供详尽的中文文档、代码实例等，助力开发者掌握并使用这门新兴的编程语言。"
@@ -287,7 +291,7 @@ zh-CN:
       visitors: "次阅读"
     topic:
       comments_count: "%{count} 条评论"
-      visitors: "次阅读"
+      visitors: "%{count} 次阅读"
       top: "置顶"
   user_mailer:
     confirmation:

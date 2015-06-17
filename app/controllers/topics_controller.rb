@@ -55,6 +55,7 @@ class TopicsController < ApplicationController
 
     respond_to do |format|
       format.html
+      format.mobile
     end
   end
 
@@ -82,7 +83,7 @@ class TopicsController < ApplicationController
   private
 
   def topic_params
-    params.require(:topic).permit(:title, :category_id, :body)
+    params.require(:topic).permit(:title, :category_id, :body, :answer, :audio, :remove_audio)
   end
 
   def find_topic

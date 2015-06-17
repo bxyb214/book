@@ -11,98 +11,117 @@
           .panel-heading
             h1.panel-title = @topic.title
           .panel-body
-              .list-group.list-group-campo
-                .list-group-item.comment data-creator-id=@topic.user_id
-                  a.list-group-item-avatar href=user_link(@topic.user)
-                    img.img-rounded alt="avatar" src=@topic.user.avatar.normal.url
-                  .list-group-item-content
-                    .list-group-item-heading
-                      a.comment-user href=user_link(@topic.user) data-name=@topic.user.username
-                        b = @topic.user.name
-                        '
-                        = "@#{@topic.user.username}"
+            .list-group.list-group-campo
+              .list-group-item.comment data-creator-id=@topic.user_id
+                a.list-group-item-avatar href=user_link(@topic.user)
+                  img.img-rounded alt="avatar" src=@topic.user.avatar.normal.url
+                .list-group-item-content
+                  .list-group-item-heading
+                    a.comment-user href=user_link(@topic.user) data-name=@topic.user.username
+                      b = @topic.user.name
+                      '
+                      = "@#{@topic.user.username}"
+                    = ' · '
+                    a href=topic_path(@topic)
+                      = time_ago_tag @topic.created_at
+                    - if @topic.category
                       = ' · '
-                      a href=topic_path(@topic)
-                        = time_ago_tag @topic.created_at
-                      - if @topic.category
-                        = ' · '
-                        a href=categoried_topics_path(category_id: @topic.category.slug)
-                          = @topic.category.name
+                      a href=categoried_topics_path(category_id: @topic.category.slug)
+                        = @topic.category.name
 
-                      = ' · '
-                      = @topic.visit_count
-                      = t '.visitors'
+                    = ' · '
+                    = @topic.visit_count
+                    = t '.visitors'
 
-                    article.comment-body
-                      -cache [@topic, locale] do
-                        = markdown_format @topic.body
-                    .list-group-item-actions.clearfix
-                      .pull-left
-                         = social_share_button_tag(@topic.title)
-                      .pull-right
-                        a.btn id="like-for-topic-#{@topic.id}" href=topic_like_path(@topic) data-remote="true" data-method="post"
-                          i.fa.fa-heart
-                          '
-                          span.count
-                            - if @topic.likes_count > 0
-                              = @topic.likes_count
-                        a.btn data-visible-to="creator" href=edit_topic_path(@topic)
-                          i.fa.fa-pencil
-                        a.btn data-visible-to="creator" href=trash_topic_path(@topic) data-remote="true" data-method="delete" data-confirm=t('.delete_confirm')
-                          i.fa.fa-trash-o
+                  article.comment-body
+                    -cache [@topic, locale] do
+                      = markdown_format @topic.body
+                  .list-group-item-actions.clearfix
+                    | <div id="qrcode" style="width:100px; height:100px; margin:15px 0;"></div>
+                    .pull-left
+                      - if @topic.answer
+                        button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#myModal" 答案
+                        .modal.fade id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+                          .modal-dialog
+                            .modal-content
+                              .modal-header
+                                button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                                  span aria-hidden="true" &times;
+                                h4.modal-title id="myModalLabel" 答案
+                              .modal-body
+                                = @topic.answer
+                              .modal-footer
+                                button type="button" class="btn btn-default" data-dismiss="modal" 关闭
+                      = social_share_button_tag(@topic.title)
+                    .pull-right
+                      / bxyb214 like
+                      /a.btn id="like-for-topic-#{@topic.id}" href=topic_like_path(@topic) data-remote="true" data-method="post"
+                      /  i.fa.fa-heart
+                      /  '
+                      /  span.count
+                      /    - if @topic.likes_count > 0
+                      /      = @topic.likes_count
+                      a.btn data-visible-to="creator" href=edit_topic_path(@topic)
+                        i.fa.fa-pencil
+                      a.btn data-visible-to="creator" href=trash_topic_path(@topic) data-remote="true" data-method="delete" data-confirm=t('.delete_confirm')
+                        i.fa.fa-trash-o
+                  - if @topic.audio
+                    audio preload="auto" src=@topic.audio.url
 
-        .panel#comments
-          .panel-heading
-            h3.panel-title
-              = t '.comments'
-          .panel-body
-            ul.list-group.list-group-campo id="comments-for-topic-#{@topic.id}"
-              - if @comments.any?
-                = render @comments
-              - else
-                li.list-group-item.text-center.text-muted.empty-message
-                  = t '.no_comment_yet'
-          - if @comments.total_pages > 1
-            .panel-footer.clearfix
-              .pull-right
-                = paginate @comments, theme: 'campo', params: { anchor: 'comments' }
-
-        .panel
-          .panel-body
-            - if login?
-              - unless current_user.locked?
-                .list-group.list-group-campo
-                  .list-group-item.comment
-                    a.list-group-item-avatar href=user_link(current_user)
-                      img.img-rounded alt="avatar" src=current_user.avatar.normal.url
-                    .list-group-item-content
-                      .list-group-item-heading
-                        a.comment-user href=user_link(current_user)
-                          b = current_user.name
-                          '
-                          = "@#{current_user.username}"
-                      = form_for @topic.comments.new, url: topic_comments_path(@topic), remote: true do |f|
-                        .form-group
-                          = markdown_area f, :body
-                        = f.submit t('.add_this_comment'), class: 'btn btn-success', 'data-disable-with' => t('.add_this_comment')
-              - else
-                = t '.your_account_had_been_locked'
-            - else
-              a href=signup_path(return_to: request.fullpath)
-                = t '.sign_up'
-              '
-              = t '.or'
-              '
-              a href=login_path(return_to: request.fullpath)
-                = t '.login'
-              '
-              = t '.to_comment'
+      / bxyb214 comments
+      /.panel#comments
+      /  .panel-heading
+      /    h3.panel-title
+      /      = t '.comments'
+      /  .panel-body
+      /    ul.list-group.list-group-campo id="comments-for-topic-#{@topic.id}"
+      /      - if @comments.any?
+      /        = render @comments
+      /      - else
+      /        li.list-group-item.text-center.text-muted.empty-message
+      /          = t '.no_comment_yet'
+      /  - if @comments.total_pages > 1
+      /    .panel-footer.clearfix
+      /      .pull-right
+      /        = paginate @comments, theme: 'campo', params: { anchor: 'comments' }
+      /
+      /.panel
+      /  .panel-body
+      /    - if login?
+      /      - unless current_user.locked?
+      /        .list-group.list-group-campo
+      /          .list-group-item.comment
+      /            a.list-group-item-avatar href=user_link(current_user)
+      /              img.img-rounded alt="avatar" src=current_user.avatar.normal.url
+      /            .list-group-item-content
+      /              .list-group-item-heading
+      /                a.comment-user href=user_link(current_user)
+      /                  b = current_user.name
+      /                  '
+      /                  = "@#{current_user.username}"
+      /              = form_for @topic.comments.new, url: topic_comments_path(@topic), remote: true do |f|
+      /                .form-group
+      /                  = markdown_area f, :body
+      /                = f.submit t('.add_this_comment'), class: 'btn btn-success', 'data-disable-with' => t('.add_this_comment')
+      /      - else
+      /        = t '.your_account_had_been_locked'
+      /    - else
+      /      a href=signup_path(return_to: request.fullpath)
+      /        = t '.sign_up'
+      /      '
+      /      = t '.or'
+      /      '
+      /      a href=login_path(return_to: request.fullpath)
+      /        = t '.login'
+      /      '
+      /      = t '.to_comment'
 
       .col-md-3
-        - if login?
-          .panel
-            .panel-body
-              = render 'subscriptions/subscription', subscribable: @topic
+        / bxyb214 关注问题
+        /- if login?
+        /  .panel
+        /    .panel-body
+        /      = render 'subscriptions/subscription', subscribable: @topic
 
         .panel
           .panel-heading
@@ -149,3 +168,18 @@
       commenters[$comment.attr("data-name")] = $comment.attr("data-name")
     }
     $('textarea').atwho({at:"@", 'data': Object.keys(commenters)});
+
+javascript:
+  var qrcode = new QRCode(document.getElementById("qrcode"), {
+    width: 100,
+    height: 100
+  });
+
+  qrcode.makeCode(window.location.href);
+
+
+javascript:
+  audiojs.events.ready(function () {
+    var as = audiojs.createAll();
+  });
+

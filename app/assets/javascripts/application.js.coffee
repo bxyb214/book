@@ -2,18 +2,21 @@
 #= require jquery_ujs
 #= require turbolinks
 #= require bootstrap
+#= require jquery.remotipart
 #= require jquery.autosize
 #= require jquery.validate
 #= require jquery.timeago
 #= require nprogress
 #= require campo
-#= require jquery.atwho
+#= require lib/qrcode.min
+#= require lib/audiojs/audio.min.js
 #= require_tree ./plugins
 #= require social-share-button
 
 
+
 $ ->
-  console.log "bxyb214@3songzi.com"
+  console.log "对源代码感兴趣？更多关于本站技术栈信息请参考: https://github.com/bxyb214/book"
 
 $(document).on 'page:update', ->
   $('[data-behaviors~=autosize]').autosize()

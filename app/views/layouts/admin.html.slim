@@ -37,14 +37,14 @@ html
             li class=('active' if controller_name == 'topics')
               a href=admin_topics_path
                 = t '.topics'
-            li class=('active' if controller_name == 'comments')
-              a href=admin_comments_path
-                = t '.comments'
+            /li class=('active' if controller_name == 'comments')
+            /  a href=admin_comments_path
+            /    = t '.comments'
             li class=('active' if controller_name == 'attachments')
               a href=admin_attachments_path
                 = t '.attachments'
-            li class=('active' if controller_name == 'friend_sites')
-              a href=admin_friend_sites_path
-                = t '.friend_sites'
+            /li class=('active' if controller_name == 'friend_sites')
+            /  a href=admin_friend_sites_path
+            /    = t '.friend_sites'
 
     = yield

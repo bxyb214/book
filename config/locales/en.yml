@@ -259,6 +259,9 @@ en:
       no_category: No category
       save_changes: Save changes
       title: Title
+      body: "body"
+      answer: "answer"
+      audio_path: "audio path"
     index:
       all_categories: All categories
       create_topic: Create topic
@@ -291,7 +294,7 @@ en:
       visitors: "hits"
     topic:
       comments_count: "%{count} comments"
-      visitors: "hits"
+      visitors: "%{count} hits"
       top: "Top"
   user_mailer:
     confirmation:

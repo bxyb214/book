@@ -4,8 +4,10 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   helper_method :login?, :current_user
+  helper_method :mobile_device?
 
   before_action :set_locale
+  before_filter :prepare_for_mobile
 
   private
 
@@ -104,4 +106,18 @@ class ApplicationController < ActionController::Base
   def set_locale
     I18n.locale = current_user.try(:locale)|| I18n.default_locale
   end
+
+  def mobile_device?
+    if session[:mobile_param]
+      session[:mobile_param] == '1'
+    else
+      request.user_agent =~ /Mobile|webOS/
+    end
+  end
+
+  def prepare_for_mobile
+    session[:mobile_param] = params[:mobile] if params[:mobile]
+    request.format = :mobile if mobile_device?
+  end
+
 end

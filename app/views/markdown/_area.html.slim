@@ -15,11 +15,12 @@
   .tab-content
     .tab-pane.active id=write_pane_id
       = form.text_area name, class: 'form-control', data: { behaviors: 'autosize' }, tabIndex: tabIndex
-      .file-upload
-        = file_field_tag :file, multiple: true, tabIndex: 99
-        .text.text-muted
-          = t '.attach_images_by'
-          '
-          a = t '.select_them'
+      - if name.to_s == 'body'
+        .file-upload
+          = file_field_tag :file, multiple: true, tabIndex: 99
+          .text.text-muted
+            = t '.attach_images_by'
+            '
+            a = t '.select_them'
     .tab-pane id=preview_pane_id
       article.preview

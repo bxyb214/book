@@ -1,4 +1,4 @@
-= form_for @topic, remote: true, html: { class: 'topic-form' } do |f|
+= form_for @topic, remote: true, html: { multipart: true, class: 'topic-form' } do |f|
   .row
     .col-md-9
       .form-group
@@ -7,11 +7,27 @@
       .form-group
         = f.collection_select :category_id, Category.order(topics_count: :desc), :id, :name, { include_blank: t('.no_category')}, class: 'form-control', tabIndex: 2
   .form-group
+    = f.label t('.body')
     = markdown_area f, :body, tabIndex: 3
+  .form-group
+    = f.label t('.answer')
+    = markdown_area f, :answer, tabIndex: 4
+  .form-group
+    = f.label t('.audio_path')
+    - if @topic.audio.url
+      p #{@topic.audio.url.to_s}
+    - else
+      .uploader
+        = f.file_field :audio
+    .checkbox
+      label
+        = f.check_box :remove_audio
+        '
+        = t '.remove_audio'
   - if topic.new_record?
-    = f.submit t('.create_topic'), class: 'btn btn-success', tabIndex: 4, 'data-disable-with' => t('.create_topic')
+    = f.submit t('.create_topic'), class: 'btn btn-success', tabIndex: 6, 'data-disable-with' => t('.create_topic')
   - else
-    = f.submit t('.save_changes'), class: 'btn btn-success', tabIndex: 4, 'data-disable-with' => t('.save_changes')
+    = f.submit t('.save_changes'), class: 'btn btn-success', tabIndex: 6, 'data-disable-with' => t('.save_changes')
     '
     a.btn.btn-default href=topic_path(@topic) tabIndex="5"
       = t '.cancel'
@@ -19,7 +35,7 @@
 - form_id = @topic.new_record? ? 'new_topic' : "edit_topic_#{@topic.id}"
 
 javascript:
-  $('##{form_id}').validate({
+  $('#{form_id}').validate({
     rules: {
       'topic[title]': {
         required: true

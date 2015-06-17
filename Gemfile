@@ -69,6 +69,9 @@ gem 'elasticsearch-rails', '~> 0.1.0'
 # File upload
 gem 'carrierwave', '~> 0.9.0'
 gem 'mini_magick', '~> 3.7.0'
+gem 'remotipart', '~> 1.2'
+
+
 
 # User locale detect
 gem 'http_accept_language', '~> 2.0.1'

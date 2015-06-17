@@ -72,7 +72,8 @@ CREATE TABLE categories (
     description text,
     topics_count integer DEFAULT 0,
     created_at timestamp without time zone,
-    updated_at timestamp without time zone
+    updated_at timestamp without time zone,
+    parent_id integer
 );
 
 
@@ -332,7 +333,9 @@ CREATE TABLE topics (
     trashed boolean DEFAULT false,
     created_at timestamp without time zone,
     updated_at timestamp without time zone,
-    impressions_count integer DEFAULT 0
+    impressions_count integer DEFAULT 0,
+    audio character varying(255),
+    answer text
 );
 
 
@@ -755,4 +758,8 @@ INSERT INTO schema_migrations (version) VALUES ('20140620090118');
 INSERT INTO schema_migrations (version) VALUES ('20140623033657');
 
 INSERT INTO schema_migrations (version) VALUES ('20140623065349');
+
+INSERT INTO schema_migrations (version) VALUES ('20150610065349');
+
+INSERT INTO schema_migrations (version) VALUES ('20150616062031');
 

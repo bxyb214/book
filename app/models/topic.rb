@@ -10,6 +10,9 @@ class Topic < ActiveRecord::Base
   belongs_to :user, counter_cache: true
   belongs_to :category, counter_cache: true
   has_many :comments, as: 'commentable'
+
+  mount_uploader(:audio, AudioUploader)
+
   is_impressionable :counter_cache => true
 
   validates :title, :body, presence: true
