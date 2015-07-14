@@ -22,4 +22,7 @@
                     '
                     span.text-muted = category.slug
                   .text-muted
-                    = t '.topics_count', count: category.topics_count
+                    -if category.parent_id == nil
+                      = t '.parent'
+                    -else
+                      = t '.topics_count', count: category.topics_count

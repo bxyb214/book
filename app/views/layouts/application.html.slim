@@ -61,6 +61,8 @@ html
                 /    = t '.settings'
                 /li.divider
                 li
+                  a href=admin_root_path
+                    = '控制台'
                   a href=logout_path data-method="delete"
                     = t '.logout'
           - else
@@ -85,34 +87,18 @@ html
             /li class=('active' if request.original_fullpath =~ /^\/users/)
             /  a href=users_path
             /    = t '.users'
-            li.dropdown
-              a.dropdown-toggle href="#" data-toggle="dropdown" role="button" aria-expanded="false" 英语 <span class="caret"></span>
-              ul.dropdown-menu role="menu"
-                li
-                  a href="#" 英语第一册
-                li
-                  a href="#" 英语第二册
-                li
-                  a href="#" 英语第三册
-                li.divider
-                li
-                  a href="#" 英语第四册
-                li
-                  a href="#" 英语第五册
-            li.dropdown
-              a.dropdown-toggle href="#" data-toggle="dropdown" role="button" aria-expanded="false" 语文 <span class="caret"></span>
-              ul.dropdown-menu role="menu"
-                li
-                  a href="#" 语文第一册
-                li
-                  a href="#" 语文第二册
-                li
-                  a href="#" 语文第三册
-                li.divider
-                li
-                  a href="#" 语文第四册
-                li
-                  a href="#" 语文第五册
+            - Category.where(parent_id: [nil]).each do |parent_category|
+              li.dropdown
+                a.dropdown-toggle href="#" data-toggle="dropdown" role="button" aria-expanded="false"
+                  = parent_category.name
+                  span.caret
+                ul.dropdown-menu role="menu"
+                  - Category.where(parent_id: [parent_category.id]).each do |category|
+                    li class=('active' if category == @category)
+                      a href=categoried_topics_path(category_id: category.slug)
+                        = category.name
+                        .pull-right
+                          = category.topics.size
 
     - if login? and !current_user.confirmed?
       = render 'share/user_confirm_required'

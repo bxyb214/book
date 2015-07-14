@@ -12,8 +12,6 @@
         .panel-body
           .list-group.list-group-campo
             .list-group-item.comment data-creator-id=@topic.user_id
-              a.list-group-item-avatar href=user_link(@topic.user)
-                img.img-rounded alt="avatar" src=@topic.user.avatar.normal.url
               .list-group-item-content
                 .list-group-item-heading
                   a.comment-user href=user_link(@topic.user) data-name=@topic.user.username
@@ -31,24 +29,31 @@
                   = ' · '
                   = @topic.visit_count
                   = t '.visitors'
-
+                - if @topic.audio
+                  audio preload="auto" src=@topic.audio.url
                 article.comment-body
                   -cache [@topic, locale] do
                     = markdown_format @topic.body
                 .list-group-item-actions.clearfix
-                  | <div id="qrcode" style="width:100px; height:100px; margin-top:15px;"></div>
                   .pull-left
+                    - if @topic.answer
+                      button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#myModal" 答案
+                      .modal.fade id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+                        .modal-dialog
+                          .modal-content
+                            .modal-header
+                              button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                                span aria-hidden="true" &times;
+                              h4.modal-title id="myModalLabel" 答案
+                            .modal-body
+                              = markdown_format @topic.answer
+                            .modal-footer
+                              button type="button" class="btn btn-default" data-dismiss="modal" 关闭
+
                     = social_share_button_tag(@topic.title)
 
 
-
-
-
-
 javascript:
-  var qrcode = new QRCode(document.getElementById("qrcode"), {
-    width: 100,
-    height: 100
+  audiojs.events.ready(function () {
+    var as = audiojs.createAll();
   });
-
-  qrcode.makeCode(window.location.href);

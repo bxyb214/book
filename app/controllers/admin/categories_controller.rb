@@ -44,7 +44,7 @@ class Admin::CategoriesController < Admin::ApplicationController
   private
 
   def category_params
-    params.require(:category).permit(:name, :slug, :description)
+    params.require(:category).permit(:name, :slug, :description, :parent_id)
   end
 
   def find_category

@@ -5,20 +5,23 @@
     = f.label :name
     = f.text_field :name, class: 'form-control', tabIndex: 1
   .form-group
+    = f.label :parent_id
+    = f.collection_select :parent_id, Category.where(parent_id: [nil]), :id, :name, { include_blank: t('.no_category')}, class: 'form-control', tabIndex: 2
+  .form-group
     = f.label :slug
-    = f.text_field :slug, class: 'form-control', tabIndex: 2
+    = f.text_field :slug, class: 'form-control', tabIndex: 3
   .form-group
     = f.label :description
-    = markdown_area f, :description, tabIndex: 3
+    = markdown_area f, :description, tabIndex: 4
   - unless @category.new_record?
     .form-group
       = f.label :topics_count
       = f.text_field :topics_count, class: 'form-control', disabled: true
   .clearfix
     - if category.new_record?
-      = f.submit t('.create_category'), class: 'btn btn-success', tabIndex: 4
+      = f.submit t('.create_category'), class: 'btn btn-success', tabIndex: 5
     - else
-      = f.submit t('.save_changes'), class: 'btn btn-success', tabIndex: 4
+      = f.submit t('.save_changes'), class: 'btn btn-success', tabIndex: 5
       .pull-right
         a.btn.btn-danger href=admin_category_path(@category) data-method="delete" data-confirm=t('.permanently_delete_confirm')
           = t '.permanently_delete'

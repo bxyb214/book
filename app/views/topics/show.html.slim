@@ -13,8 +13,8 @@
           .panel-body
             .list-group.list-group-campo
               .list-group-item.comment data-creator-id=@topic.user_id
-                a.list-group-item-avatar href=user_link(@topic.user)
-                  img.img-rounded alt="avatar" src=@topic.user.avatar.normal.url
+                /a.list-group-item-avatar href=user_link(@topic.user)
+                /  img.img-rounded alt="avatar" src=@topic.user.avatar.normal.url
                 .list-group-item-content
                   .list-group-item-heading
                     a.comment-user href=user_link(@topic.user) data-name=@topic.user.username
@@ -33,13 +33,15 @@
                     = @topic.visit_count
                     = t '.visitors'
 
+                  - if @topic.audio.url
+                    audio preload="false" src=@topic.audio.url
+
                   article.comment-body
                     -cache [@topic, locale] do
                       = markdown_format @topic.body
                   .list-group-item-actions.clearfix
-                    | <div id="qrcode" style="width:100px; height:100px; margin:15px 0;"></div>
                     .pull-left
-                      - if @topic.answer
+                      - if @topic.answer != ''
                         button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#myModal" 答案
                         .modal.fade id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
                           .modal-dialog
@@ -49,9 +51,10 @@
                                   span aria-hidden="true" &times;
                                 h4.modal-title id="myModalLabel" 答案
                               .modal-body
-                                = @topic.answer
+                                = markdown_format @topic.answer
                               .modal-footer
                                 button type="button" class="btn btn-default" data-dismiss="modal" 关闭
+                      #qrcode style="width:100px; height:100px; margin:15px 0;"
                       = social_share_button_tag(@topic.title)
                     .pull-right
                       / bxyb214 like
@@ -65,8 +68,7 @@
                         i.fa.fa-pencil
                       a.btn data-visible-to="creator" href=trash_topic_path(@topic) data-remote="true" data-method="delete" data-confirm=t('.delete_confirm')
                         i.fa.fa-trash-o
-                  - if @topic.audio
-                    audio preload="auto" src=@topic.audio.url
+
 
       / bxyb214 comments
       /.panel#comments

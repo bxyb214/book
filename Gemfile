@@ -5,7 +5,7 @@ gem 'rails', '4.1.1'
 # Use postgresql as the database for Active Record
 gem 'pg'
 
-# gem 'mysql2'
+gem 'rabl'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
@@ -107,10 +107,20 @@ end
 
 group :development, :test do
   gem 'factory_girl_rails', '~> 4.3.0'
+  gem 'rspec-rails'
   gem 'pry',                '0.9.12'
   gem 'pry-nav',            '0.2.2'
   gem 'pry-stack_explorer', '0.4.9'
   gem 'pry-rails',          '0.2.2'
+end
+
+
+group :test do
+  gem 'capybara'
+  gem 'cucumber-rails', :require=>false
+  gem 'database_cleaner', '1.0.1'
+  gem 'email_spec'
+  gem 'launchy'
 end
 
 gem 'meta-tags'

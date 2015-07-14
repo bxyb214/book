@@ -28,6 +28,10 @@ html, body{
     min-height: 100%;
     height: auto !important;
   }
+
+  .list-group .list-group-item-actions{
+    margin-left: 0;
+  }
 }
 
 .text-hide-overflow {
