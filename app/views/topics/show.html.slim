@@ -34,7 +34,7 @@
                     = t '.visitors'
 
                   - if @topic.audio.url
-                    audio preload="false" src=@topic.audio.url
+                    audio src=@topic.audio.url controls="controls"
 
                   article.comment-body
                     -cache [@topic, locale] do
@@ -179,9 +179,4 @@ javascript:
 
   qrcode.makeCode(window.location.href);
 
-
-javascript:
-  audiojs.events.ready(function () {
-    var as = audiojs.createAll();
-  });
 

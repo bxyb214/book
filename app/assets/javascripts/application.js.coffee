@@ -9,7 +9,6 @@
 #= require nprogress
 #= require campo
 #= require lib/qrcode.min
-#= require lib/audiojs/audio.min.js
 #= require_tree ./plugins
 #= require social-share-button
 
