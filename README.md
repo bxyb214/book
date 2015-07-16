@@ -17,10 +17,13 @@ It's good for:
 
 The best deploy environment is Ubuntu 14.04 LTS, require at least 1G memory.
 
-You don't need to install all denpendency manual, an auto-install scirpt will be show below.
+## Setup
 
+- script/environment.sh to install required software
+- script/setup.sh to configure Passenger and Nginx
 
 ## Gems
+
 - SCSS for stylesheets
 - Uglifier as compressor for JavaScript assets
 - jquery as the JavaScript library
