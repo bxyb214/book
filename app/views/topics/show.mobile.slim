@@ -13,14 +13,14 @@
           .list-group.list-group-campo
             .list-group-item.comment data-creator-id=@topic.user_id
               .list-group-item-content
-                - if @topic.audio
+                - if @topic.audio != ''
                   audio src=@topic.audio.url controls="controls"
                 article.comment-body
                   -cache [@topic, locale] do
                     = markdown_format @topic.body
                 .list-group-item-actions.clearfix
                   .pull-left
-                    - if @topic.answer
+                    - if @topic.answer != ''
                       button id="answer_button" type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#myModal" 答案
                       .modal.fade id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
                         .modal-dialog

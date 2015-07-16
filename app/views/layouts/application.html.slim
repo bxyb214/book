@@ -111,8 +111,6 @@ html
         .powerby
           | 本站使用Ruby on Rails搭建。
         .friend-links.clearfix
-          .link-item.pull-left
-            =link_to "官方微信", "#", target: '_blank'
           - FriendSite.all.each do |friend_site|
             .link-item.pull-left
               =link_to friend_site.name, friend_site.url, target: '_blank'
