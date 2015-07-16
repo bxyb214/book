@@ -24,17 +24,17 @@ You don't need to install all denpendency manual, an auto-install scirpt will be
 
 
 ## Gems
-SCSS for stylesheets
-Uglifier as compressor for JavaScript assets
-jquery as the JavaScript library
-Turbolinks makes following links in your web application faster.
-Bootstrap and Font Awesome
-Slim for template
-Markdown
-carrierwave for file upload
-capistrano for Deploy
-pry for debug
-cucumber for auto test
+- SCSS for stylesheets
+- Uglifier as compressor for JavaScript assets
+- jquery as the JavaScript library
+- Turbolinks makes following links in your web application faster.
+- Bootstrap and Font Awesome
+- Slim for template
+- redcarpet for Markdown
+- carrierwave for file upload
+- capistrano for Deploy
+- pry for debug
+- cucumber for auto test
 
 
 ## License
