@@ -13,7 +13,7 @@
           .list-group.list-group-campo
             .list-group-item.comment data-creator-id=@topic.user_id
               .list-group-item-content
-                - if @topic.audio != ''
+                - if @topic.audio.url
                   audio src=@topic.audio.url controls="controls"
                 article.comment-body
                   -cache [@topic, locale] do
