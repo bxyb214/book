@@ -38,4 +38,12 @@ server '139.129.129.254', user: 'deployer', roles: %w{web app}
 #   }
 # setting per server overrides global ssh_options
 
+
+set :ssh_options, {
+    forward_agent: false,
+    auth_methods: %w(password),
+    password: 'Q1w2e3r4',
+    user: 'deployer',
+}
+
 set :rails_env, 'production'

@@ -32,6 +32,18 @@
 # Ignore deploy config.
 /config/deploy
 
+# Ignore database config
+/config/database.yml
+
+# Ignore database config
+/config/database.yml
+
+# Ingore config
+/config/config.yml
+
+# Ingore secrets
+/config/secrets.yml
+
 *.swo
 *.swp
 
