@@ -13,31 +13,15 @@
           .list-group.list-group-campo
             .list-group-item.comment data-creator-id=@topic.user_id
               .list-group-item-content
-                .list-group-item-heading
-                  a.comment-user href=user_link(@topic.user) data-name=@topic.user.username
-                    b = @topic.user.name
-                    '
-                    = "@#{@topic.user.username}"
-                  = ' · '
-                  a href=topic_path(@topic)
-                    = time_ago_tag @topic.created_at
-                  - if @topic.category
-                    = ' · '
-                    a href=categoried_topics_path(category_id: @topic.category.slug)
-                      = @topic.category.name
-
-                  = ' · '
-                  = @topic.visit_count
-                  = t '.visitors'
                 - if @topic.audio
-                  audio preload="auto" src=@topic.audio.url
+                  audio src=@topic.audio.url controls="controls"
                 article.comment-body
                   -cache [@topic, locale] do
                     = markdown_format @topic.body
                 .list-group-item-actions.clearfix
                   .pull-left
                     - if @topic.answer
-                      button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#myModal" 答案
+                      button id="answer_button" type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#myModal" 答案
                       .modal.fade id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
                         .modal-dialog
                           .modal-content
@@ -52,8 +36,3 @@
 
                     = social_share_button_tag(@topic.title)
 
-
-javascript:
-  audiojs.events.ready(function () {
-    var as = audiojs.createAll();
-  });
