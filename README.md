@@ -16,7 +16,7 @@ It's good for:
 - elasticsearch 1.0+ for full text searching
 - Redis for backgound jobs
 - memcached for cache
-- postfix or other email service(through SMTP) for sending system email
+- postfix(through SMTP) for sending system email
 
 The best deploy environment is Ubuntu 14.04 LTS, require at least 1G memory.
 
@@ -32,7 +32,6 @@ Bootstrap and Font Awesome
 Slim for template
 Markdown
 carrierwave for file upload
-resque for Background jobs
 capistrano for Deploy
 pry for debug
 cucumber for auto test
