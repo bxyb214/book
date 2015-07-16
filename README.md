@@ -1,6 +1,3 @@
-# This is the codebase of [山东教育在线](http://139.129.129.254/)
-
-
 [山东教育在线](http://139.129.129.254/) is based on @Rei's Campo, which is a lightweight forum application, base on Ruby on Rails.
 
 It's good for:
