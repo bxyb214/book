@@ -3,7 +3,7 @@
 
 - @page_title = @topic.title
 
-.main
+.main id="mobile_main"
   .container
     .row
       .panel
@@ -34,7 +34,7 @@
 
                     = social_share_button_tag(@topic.title)
       - if @topic.audio.url
-        audio width="100%" height="35px" src=@topic.audio.url type="audio/mp3" controls="controls"
+        audio width="100%" src=@topic.audio.url type="audio/mp3" controls="controls"
 
 javascript:
   $('audio,video').mediaelementplayer();
