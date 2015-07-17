@@ -13,8 +13,6 @@
           .list-group.list-group-campo
             .list-group-item.comment data-creator-id=@topic.user_id
               .list-group-item-content
-                - if @topic.audio.url
-                  audio src=@topic.audio.url controls="controls"
                 article.comment-body
                   -cache [@topic, locale] do
                     = markdown_format @topic.body
@@ -35,4 +33,5 @@
                               button type="button" class="btn btn-default" data-dismiss="modal" 关闭
 
                     = social_share_button_tag(@topic.title)
-
+      - if @topic.audio.url
+        audio id="audio_bottom" src=@topic.audio.url controls="controls"

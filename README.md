@@ -8,7 +8,7 @@ It's good for:
 
 ## Build with
 
-- Ruby 2.2.1 and Rails 4.1.1
+- Ruby 2.1.1 and Rails 4.1.1
 - Postgresql 9.1+ for databsae
 - elasticsearch 1.0+ for full text searching
 - Redis for backgound jobs

@@ -44,7 +44,14 @@ html, body{
 }
 
 #answer_button {
-  margin: 15px 0
+  margin: 15px 0;
+}
+
+#audio_bottom {
+  position: fixed;
+  margin: 0 auto;
+  bottom: 0;
+  text-align:center;
 }
 
 footer{
