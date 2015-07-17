@@ -1,11 +1,5 @@
 [山东教育在线](http://139.129.129.254/) is based on @Rei's Campo, which is a lightweight forum application, base on Ruby on Rails.
 
-It's good for:
-
-- Build user CMS for your website.
-- As code base, customize develop for your business.
-
-
 ## Build with
 
 - Ruby 2.1.1 and Rails 4.1.1
