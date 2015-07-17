@@ -17,6 +17,7 @@ $font-size-base: 15px;
 @import "markdown";
 @import "social-share-button";
 @import "jquery.atwho";
+@import "mediaelementplayer";
 
 body {
   background: #eee;
@@ -29,6 +30,10 @@ html, body{
     height: auto !important;
   }
 
+  .panel {
+    margin-bottom: 10px;
+  }
+
   .list-group .list-group-item-actions{
     margin-left: 0;
   }
@@ -36,6 +41,8 @@ html, body{
   audio {
     width: 100%
   }
+
+
 }
 
 .text-hide-overflow {
@@ -47,7 +54,7 @@ html, body{
   margin: 15px 0;
 }
 
-#audio_bottom {
+.mejs-container {
   position: fixed;
   margin: 0 auto;
   bottom: 0;

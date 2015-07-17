@@ -9,6 +9,7 @@
 #= require nprogress
 #= require campo
 #= require lib/qrcode.min
+#= require lib/mediaelement-and-player
 #= require_tree ./plugins
 #= require social-share-button
 

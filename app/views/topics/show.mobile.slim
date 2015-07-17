@@ -34,4 +34,7 @@
 
                     = social_share_button_tag(@topic.title)
       - if @topic.audio.url
-        audio id="audio_bottom" src=@topic.audio.url controls="controls"
+        audio width="100%" src=@topic.audio.url type="audio/mp3" controls="controls"
+
+javascript:
+  $('audio,video').mediaelementplayer();
