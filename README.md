@@ -1,4 +1,3 @@
-[Swift](http://www.swiftist.org) is based on @Rei's Campo, which is a lightweight forum application, base on Ruby on Rails.
 
 ## Build with
 
